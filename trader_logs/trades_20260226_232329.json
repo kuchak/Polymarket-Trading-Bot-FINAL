@@ -1,0 +1,38 @@
+{
+  "bankroll": 273.75325443800006,
+  "wagered": 87.87587956200001,
+  "pnl": 0,
+  "open": [
+    {
+      "token_id": "54414722264651367046653444002640597654922547479929804994099401693700968898197",
+      "event": "Georgia Bulldogs vs. Texas Longhorns (W)",
+      "outcome": "Texas Longhorns",
+      "strategy": "NCAAB",
+      "entry_price": 0.9745,
+      "shares": 37.10919794766547,
+      "cost": 36.1629134,
+      "entry_ts": "2026-02-26T15:25:18.713441+00:00"
+    },
+    {
+      "token_id": "80828457657054851046400091550426262145595273502628409949767677217945279260590",
+      "event": "Valparaiso Beacons vs. Northern Iowa Panthers (W)",
+      "outcome": "Northern Iowa Panthers",
+      "strategy": "NCAAB",
+      "entry_price": 0.975,
+      "shares": 33.381150830769236,
+      "cost": 32.546622060000004,
+      "entry_ts": "2026-02-26T15:25:18.952687+00:00"
+    },
+    {
+      "token_id": "98027947938042451240650650994918141309638113325804938513469025123380136935446",
+      "event": "Le Moyne Dolphins vs. Fairleigh Dickinson Knights (W)",
+      "outcome": "Fairleigh Dickinson Knights",
+      "strategy": "NCAAB",
+      "entry_price": 0.9755,
+      "shares": 19.647713072270626,
+      "cost": 19.166344101999996,
+      "entry_ts": "2026-02-26T15:25:19.200381+00:00"
+    }
+  ],
+  "closed": []
+}

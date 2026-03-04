@@ -1,0 +1,68 @@
+{
+  "bankroll": 198.66708,
+  "wagered": 161.33292,
+  "pnl": 0,
+  "open": [
+    {
+      "token_id": "111511514240187408362199657661290064504195685749984927952116807557987349611317",
+      "event": "WTT - Men's Singles: Chuqin Wang vs Anders Lind",
+      "outcome": "Wang",
+      "strategy": "TableTennis",
+      "entry_price": 0.95,
+      "shares": 37.89473684210527,
+      "cost": 36.0,
+      "entry_ts": "2026-02-26T13:05:07.228461+00:00"
+    },
+    {
+      "token_id": "37631749766068271135412563802134612810601075154388869051856162595901664755211",
+      "event": "St. Brieuc: Matteo Martineau vs Jurij Rodionov",
+      "outcome": "Martineau",
+      "strategy": "Tennis",
+      "entry_price": 0.91,
+      "shares": 35.6043956043956,
+      "cost": 32.4,
+      "entry_ts": "2026-02-26T13:05:07.229028+00:00"
+    },
+    {
+      "token_id": "56436656116627149816977902171240800049416072415582497849146170146343548161211",
+      "event": "Dubai Tennis Championships: Felix Auger-Aliassime vs Jiri Lehecka",
+      "outcome": "Felix Auger-Aliassime",
+      "strategy": "Tennis",
+      "entry_price": 0.895,
+      "shares": 32.581005586592184,
+      "cost": 29.160000000000004,
+      "entry_ts": "2026-02-26T13:05:07.229475+00:00"
+    },
+    {
+      "token_id": "42979250651683149457730950385356612976918777304324302948654585599937606338636",
+      "event": "Pittsburgh Panthers vs. Miami Hurricanes (W)",
+      "outcome": "Miami Hurricanes",
+      "strategy": "NCAAB",
+      "entry_price": 0.95,
+      "shares": 27.62526315789474,
+      "cost": 26.244,
+      "entry_ts": "2026-02-26T13:05:07.229951+00:00"
+    },
+    {
+      "token_id": "30102600535787917639445954543867983315144615304768619653687482875613991555649",
+      "event": "Eastern Illinois Panthers vs. Lindenwood Lions (W)",
+      "outcome": "Lindenwood Lions",
+      "strategy": "NCAAB",
+      "entry_price": 0.955,
+      "shares": 24.732565445026182,
+      "cost": 23.619600000000002,
+      "entry_ts": "2026-02-26T13:05:07.230261+00:00"
+    },
+    {
+      "token_id": "54414722264651367046653444002640597654922547479929804994099401693700968898197",
+      "event": "Georgia Bulldogs vs. Texas Longhorns (W)",
+      "outcome": "Texas Longhorns",
+      "strategy": "NCAAB",
+      "entry_price": 0.955,
+      "shares": 14.564732984293189,
+      "cost": 13.909319999999994,
+      "entry_ts": "2026-02-26T13:05:07.230494+00:00"
+    }
+  ],
+  "closed": []
+}

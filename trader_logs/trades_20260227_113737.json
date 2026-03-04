@@ -1,0 +1,81 @@
+{
+  "bankroll": 161.22741920000004,
+  "wagered": 241.84112880000004,
+  "pnl": 0,
+  "total_exposure": 241.84112880000004,
+  "open": [
+    {
+      "token_id": "14902656331355042032183799789504794689395011235563460996775183639765688831521",
+      "event": "UC Riverside Highlanders vs. UC Santa Barbara Gauchos",
+      "outcome": "UC Santa Barbara Gauchos",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.837,
+      "shares": 48.15633787335724,
+      "cost": 40.3068548,
+      "market_id": "1404678",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:37:39.898839+00:00"
+    },
+    {
+      "token_id": "2326411250802664645103994674996684025320583919790017979176013766359087337",
+      "event": "Montana Grizzlies vs. Sacramento State Hornets (W)",
+      "outcome": "Sacramento State Hornets",
+      "strategy": "CWBB",
+      "entry_price": 0.865,
+      "shares": 46.59752,
+      "cost": 40.3068548,
+      "market_id": "1402360",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:37:39.899621+00:00"
+    },
+    {
+      "token_id": "109648527107124802233902351975183862664445021103223060169922641351247566368934",
+      "event": "Pelicans vs. Jazz",
+      "outcome": "Pelicans",
+      "strategy": "NBA",
+      "entry_price": 0.985,
+      "shares": 40.920664771573605,
+      "cost": 40.3068548,
+      "market_id": "1402336",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:37:39.900716+00:00"
+    },
+    {
+      "token_id": "6289970068546646881347777348120881438894191344295603213008245775914699905529",
+      "event": "Pepperdine Waves vs. Portland Pilots (W)",
+      "outcome": "Pepperdine Waves",
+      "strategy": "CWBB",
+      "entry_price": 0.92,
+      "shares": 43.811798695652186,
+      "cost": 40.30685480000001,
+      "market_id": "1402368",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:37:39.901456+00:00"
+    },
+    {
+      "token_id": "108855562244700164967477631179323792930766060601472509407817701318490655227713",
+      "event": "Portland State Vikings vs. Montana State Bobcats",
+      "outcome": "Montana State Bobcats",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.9505,
+      "shares": 42.405949289847456,
+      "cost": 40.30685480000001,
+      "market_id": "1404647",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:37:39.901767+00:00"
+    },
+    {
+      "token_id": "45293254807574537953989854963992772077463733776327031817731270328411019806078",
+      "event": "Jacksonville State Gamecocks vs. UTEP Miners (W)",
+      "outcome": "Jacksonville State Gamecocks",
+      "strategy": "CWBB",
+      "entry_price": 0.94,
+      "shares": 42.87963276595746,
+      "cost": 40.30685480000001,
+      "market_id": "1402335",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:37:39.902286+00:00"
+    }
+  ],
+  "closed": []
+}

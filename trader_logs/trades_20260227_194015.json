@@ -1,0 +1,21 @@
+{
+  "bankroll": 259.9632297,
+  "wagered": 28.8848033,
+  "pnl": 0,
+  "total_exposure": 28.8848033,
+  "open": [
+    {
+      "token_id": "68316356636445655468286693033280539296502747381521128050584273340937153314958",
+      "event": "Pune: Manoj Dhamne Manas vs Duje Ajdukovic",
+      "outcome": "Manoj Dhamne Manas",
+      "strategy": "ATP",
+      "entry_price": 0.93,
+      "shares": 31.058928279569894,
+      "cost": 28.8848033,
+      "market_id": "1436316",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T11:40:25.732860+00:00"
+    }
+  ],
+  "closed": []
+}

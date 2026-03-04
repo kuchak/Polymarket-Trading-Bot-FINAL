@@ -1,0 +1,88 @@
+{
+  "bankroll": 174.5973954,
+  "wagered": 185.4026046,
+  "pnl": 0,
+  "open": [
+    {
+      "token_id": "101117427058140845149302580768764597163302953815594641642045660100933720022925",
+      "event": "WTT - Men's Singles: Shidong Lin vs Jong-Hoon Lim",
+      "outcome": "Lin",
+      "strategy": "TableTennis",
+      "entry_price": 0.853,
+      "shares": 42.20398593200469,
+      "cost": 36.0,
+      "entry_ts": "2026-02-26T10:07:24.878614+00:00"
+    },
+    {
+      "token_id": "38710397065880737836275863822225143550688619046399517403985580555569205866595",
+      "event": "Antalya: Nuria Brancaccio vs Panna Udvardy",
+      "outcome": "Udvardy",
+      "strategy": "Tennis",
+      "entry_price": 0.86,
+      "shares": 37.67441860465116,
+      "cost": 32.4,
+      "entry_ts": "2026-02-26T10:07:24.879025+00:00"
+    },
+    {
+      "token_id": "111511514240187408362199657661290064504195685749984927952116807557987349611317",
+      "event": "WTT - Men's Singles: Chuqin Wang vs Anders Lind",
+      "outcome": "Wang",
+      "strategy": "TableTennis",
+      "entry_price": 0.951,
+      "shares": 30.66246056782335,
+      "cost": 29.160000000000004,
+      "entry_ts": "2026-02-26T10:07:24.879258+00:00"
+    },
+    {
+      "token_id": "12775633294453699059014727298399105802336328278612201057647301831500756764380",
+      "event": "Western Illinois Leathernecks vs. Southern Indiana Screaming Eagles",
+      "outcome": "Southern Indiana Screaming Eagles",
+      "strategy": "NCAAB",
+      "entry_price": 0.9545,
+      "shares": 27.495023572551073,
+      "cost": 26.244,
+      "entry_ts": "2026-02-26T10:07:24.879558+00:00"
+    },
+    {
+      "token_id": "63641251227531065742343365096330102514582567274567590451495567161607972396097",
+      "event": "Purdue Fort Wayne Mastodons vs. Milwaukee Panthers (W)",
+      "outcome": "Purdue Fort Wayne Mastodons",
+      "strategy": "NCAAB",
+      "entry_price": 0.995,
+      "shares": 23.738291457286433,
+      "cost": 23.619600000000002,
+      "entry_ts": "2026-02-26T10:07:24.879790+00:00"
+    },
+    {
+      "token_id": "8052352244397286776514169396081518547180461520933749711876615785220122525357",
+      "event": "Antalya: Selena Janicijevic vs Ekaterine Gorgodze",
+      "outcome": "Gorgodze",
+      "strategy": "Tennis",
+      "entry_price": 0.905,
+      "shares": 23.489104972375692,
+      "cost": 21.257640000000002,
+      "entry_ts": "2026-02-26T10:07:24.880020+00:00"
+    },
+    {
+      "token_id": "30102600535787917639445954543867983315144615304768619653687482875613991555649",
+      "event": "Eastern Illinois Panthers vs. Lindenwood Lions (W)",
+      "outcome": "Lindenwood Lions",
+      "strategy": "NCAAB",
+      "entry_price": 0.95,
+      "shares": 7.928450526315779,
+      "cost": 7.53202799999999,
+      "entry_ts": "2026-02-26T10:07:24.880246+00:00"
+    },
+    {
+      "token_id": "100518348303833587123803708143930933383413112606535846031164167860067366018883",
+      "event": "Canucks vs. Jets",
+      "outcome": "Jets",
+      "strategy": "Hockey",
+      "entry_price": 0.98,
+      "shares": 9.376874081632653,
+      "cost": 9.1893366,
+      "entry_ts": "2026-02-26T10:07:24.880479+00:00"
+    }
+  ],
+  "closed": []
+}

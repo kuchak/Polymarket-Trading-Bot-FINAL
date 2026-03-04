@@ -1,0 +1,69 @@
+{
+  "bankroll": 224.9530361,
+  "wagered": 160.3318169,
+  "pnl": 0,
+  "total_exposure": 160.3318169,
+  "open": [
+    {
+      "token_id": "41171668178491777733647782200646226704519744384105625757903274199132656537640",
+      "event": "Bethune-Cookman Wildcats vs. Grambling State Tigers (W)",
+      "outcome": "Grambling State Tigers",
+      "strategy": "CWBB",
+      "entry_price": 0.97,
+      "shares": 40.56376783505155,
+      "cost": 39.3468548,
+      "market_id": "1402406",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T04:14:43.756674+00:00"
+    },
+    {
+      "token_id": "88299265951946871799367072652912343886684019270882557009050347370465820107500",
+      "event": "Long Beach State Beach vs. Cal Poly Mustangs",
+      "outcome": "Cal Poly Mustangs",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.95,
+      "shares": 37.375636631578956,
+      "cost": 35.506854800000006,
+      "market_id": "1404669",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T04:24:11.420262+00:00"
+    },
+    {
+      "token_id": "72326331620948894537518598285910719282241611200584569397750879977086936424480",
+      "event": "UT Arlington Mavericks vs. California Baptist Lancers",
+      "outcome": "California Baptist Lancers",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.95,
+      "shares": 37.375636631578956,
+      "cost": 35.506854800000006,
+      "market_id": "1404449",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T04:26:35.863170+00:00"
+    },
+    {
+      "token_id": "35517702026103948397883326571153000939668778370653944409762150739838618435872",
+      "event": "Jackson State Tigers vs. Prairie View A&M Panthers",
+      "outcome": "Prairie View A&M Panthers",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.95,
+      "shares": 22.81562757894737,
+      "cost": 21.6748462,
+      "market_id": "1404680",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T04:33:37.770984+00:00"
+    },
+    {
+      "token_id": "1950268735325382807513549183082380489620556179232538766012987907538639453505",
+      "event": "Clemson Tigers vs. California Golden Bears (W)",
+      "outcome": "Clemson Tigers",
+      "strategy": "CWBB",
+      "entry_price": 0.94,
+      "shares": 30.102559893617023,
+      "cost": 28.2964063,
+      "market_id": "1402412",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T04:40:44.717915+00:00"
+    }
+  ],
+  "closed": []
+}

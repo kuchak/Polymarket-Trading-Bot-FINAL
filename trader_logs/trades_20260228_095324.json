@@ -1,0 +1,81 @@
+{
+  "bankroll": 14.203160250000007,
+  "wagered": 61.80948075,
+  "pnl": 0,
+  "total_exposure": 61.80948075,
+  "open": [
+    {
+      "token_id": "107390300231044474442526983813553759927050554175258850146457216187229973960651",
+      "event": "Knicks vs. Bucks",
+      "outcome": "Knicks",
+      "strategy": "NBA",
+      "entry_price": 0.91,
+      "shares": 12.52955620879121,
+      "cost": 11.40189615,
+      "market_id": "1407883",
+      "scale_count": 0,
+      "entry_ts": "2026-02-28T01:53:30.990696+00:00"
+    },
+    {
+      "token_id": "14979619483967217617818199415529891986941911781856516028842657579434017001562",
+      "event": "Nets vs. Celtics",
+      "outcome": "Celtics",
+      "strategy": "NBA",
+      "entry_price": 0.96,
+      "shares": 11.876975156250001,
+      "cost": 11.40189615,
+      "market_id": "1407880",
+      "scale_count": 0,
+      "entry_ts": "2026-02-28T01:53:35.618179+00:00"
+    },
+    {
+      "token_id": "96073504411655277636631018721865429069449184600023828060221143771465050860165",
+      "event": "Merida Open Akron: Victoria Jimenez Kasintseva vs Shuai Zhang",
+      "outcome": "Shuai Zhang",
+      "strategy": "WTA",
+      "entry_price": 0.85,
+      "shares": 13.413995470588237,
+      "cost": 11.40189615,
+      "market_id": "1452478",
+      "scale_count": 0,
+      "entry_ts": "2026-02-28T01:53:40.507624+00:00"
+    },
+    {
+      "token_id": "59166055328371906587961426530697031914136145437182109342614325303743331243434",
+      "event": "ATX Open: Oksana Selekhmeteva vs Peyton Stearns",
+      "outcome": "Peyton Stearns",
+      "strategy": "WTA",
+      "entry_price": 0.9299999999999999,
+      "shares": 12.260103387096775,
+      "cost": 11.40189615,
+      "market_id": "1450942",
+      "scale_count": 0,
+      "entry_ts": "2026-02-28T01:53:45.543726+00:00"
+    },
+    {
+      "token_id": "33502219150266539375898968247554704673805916794123262493302502248480823547973",
+      "event": "Southern Miss Golden Eagles vs. Louisiana-Monroe Warhawks (W)",
+      "outcome": "Southern Miss Golden Eagles",
+      "strategy": "CWBB",
+      "entry_price": 0.94,
+      "shares": 12.129676755319151,
+      "cost": 11.40189615,
+      "market_id": "1407895",
+      "scale_count": 0,
+      "entry_ts": "2026-02-28T01:53:50.194690+00:00"
+    },
+    {
+      "token_id": "5549361954958164520848112224813210635170508944477079122704040279452314856237",
+      "event": "Merrimack College Warriors vs. Canisius Golden Griffins",
+      "outcome": "Canisius Golden Griffins",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.96,
+      "shares": 5,
+      "cost": 4.8,
+      "market_id": "1404689",
+      "scale_count": 0,
+      "entry_ts": "2026-02-28T01:53:54.863610+00:00"
+    }
+  ],
+  "closed": []
+}

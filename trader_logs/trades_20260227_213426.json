@@ -1,0 +1,45 @@
+{
+  "bankroll": 128.9888963440941,
+  "wagered": 0,
+  "pnl": 0,
+  "total_exposure": 118.26467097223403,
+  "open": [
+    {
+      "token_id": "97060833595220896480876166962355894070468279116370480293687370881523108638471",
+      "event": "Antalya: Amarissa Kiara Toth vs Mayar Sherif",
+      "outcome": "Mayar Sherif",
+      "strategy": "WTA",
+      "entry_price": 0.91,
+      "shares": 48.52117516483517,
+      "cost": 44.154269400000004,
+      "market_id": "1448523",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T12:15:08.368691+00:00"
+    },
+    {
+      "token_id": "41577962029255801809587975451334046783155659988643926055413441184515351660208",
+      "event": "Pune: Manoj Dhamne Manas vs Duje Ajdukovic",
+      "outcome": "Duje Ajdukovic",
+      "strategy": "ATP",
+      "entry_price": 0.94,
+      "shares": 39.38964829787234,
+      "cost": 37.0262694,
+      "market_id": "1436316",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T12:50:49.532328+00:00"
+    },
+    {
+      "token_id": "39016869340090252555973191921442716186313523397046136940912446147360991190845",
+      "event": "Lugano: Maxim Mrva vs Zsombor Piros",
+      "outcome": "Zsombor Piros",
+      "strategy": "ATP",
+      "entry_price": 0.95,
+      "shares": 39.035928602351625,
+      "cost": 37.08413217223404,
+      "market_id": "1439640",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T12:57:54.905708+00:00"
+    }
+  ],
+  "closed": []
+}

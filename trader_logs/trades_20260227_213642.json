@@ -1,0 +1,93 @@
+{
+  "bankroll": 40.82774219999999,
+  "wagered": 268.2953928,
+  "pnl": 19.13692977975261,
+  "total_exposure": 268.2953928,
+  "open": [
+    {
+      "token_id": "97060833595220896480876166962355894070468279116370480293687370881523108638471",
+      "event": "Antalya: Amarissa Kiara Toth vs Mayar Sherif",
+      "outcome": "Mayar Sherif",
+      "strategy": "WTA",
+      "entry_price": 0.8751449065045945,
+      "shares": 48.59174793103448,
+      "cost": 42.5248207,
+      "market_id": "1448523",
+      "scale_count": 1,
+      "entry_ts": "2026-02-27T13:50:42.050865+00:00"
+    },
+    {
+      "token_id": "111463275419089601077831228555742697682298718604533608617944751683593865453348",
+      "event": "Tigre 2: Facundo Acosta vs Juan Bautista Torres",
+      "outcome": "Facundo Acosta",
+      "strategy": "ATP",
+      "entry_price": 0.9,
+      "shares": 54.249691166666665,
+      "cost": 48.82472205,
+      "market_id": "1436306",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T14:23:40.823362+00:00"
+    },
+    {
+      "token_id": "38533304987571545691922840300905816829715130739126818581384438043825947910902",
+      "event": "Dubai Tennis Championships: Felix Auger-Aliassime vs Daniil Medvedev",
+      "outcome": "Daniil Medvedev",
+      "strategy": "ATP",
+      "entry_price": 0.96,
+      "shares": 50.85908546875,
+      "cost": 48.82472205,
+      "market_id": "1448572",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T14:23:45.557529+00:00"
+    },
+    {
+      "token_id": "55736248809256115700067215235855977713999018927397931185629976569890225063686",
+      "event": "St. Brieuc: Sebastian Ofner vs Matteo Martineau",
+      "outcome": "Sebastian Ofner",
+      "strategy": "ATP",
+      "entry_price": 0.96,
+      "shares": 34.771586093749995,
+      "cost": 33.380722649999996,
+      "market_id": "1448566",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T14:33:20.137445+00:00"
+    },
+    {
+      "token_id": "64527340429733737311940456767426938055145017874338515813236704518567776929323",
+      "event": "Lugano: Mika Brunold vs Marc-Andrea Huesler",
+      "outcome": "Mika Brunold",
+      "strategy": "ATP",
+      "entry_price": 0.95,
+      "shares": 21.592960793684238,
+      "cost": 20.513312754000026,
+      "market_id": "1448577",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T14:54:16.729817+00:00"
+    },
+    {
+      "token_id": "92740956206049613030425831219918102681484095875684411825186836680510256616998",
+      "event": "Chile Open: Andrea Pellegrino vs Luciano Darderi",
+      "outcome": "Luciano Darderi",
+      "strategy": "ATP",
+      "entry_price": 0.948,
+      "shares": 53.06475332278481,
+      "cost": 50.30538615,
+      "market_id": "1442006",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T23:37:05.642383+00:00"
+    },
+    {
+      "token_id": "1525676785530610378329851994324981269208766189745463023084278621052690467308",
+      "event": "Towson Tigers vs. Campbell Fighting Camels (W)",
+      "outcome": "Campbell Fighting Camels",
+      "strategy": "CWBB",
+      "entry_price": 0.87,
+      "shares": 27.496214305747095,
+      "cost": 23.921706445999973,
+      "market_id": "1407908",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T23:38:48.852680+00:00"
+    }
+  ],
+  "closed": []
+}

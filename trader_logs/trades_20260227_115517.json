@@ -1,0 +1,81 @@
+{
+  "bankroll": 161.22741920000004,
+  "wagered": 241.84112880000004,
+  "pnl": 0,
+  "total_exposure": 241.84112880000004,
+  "open": [
+    {
+      "token_id": "8248561543610485035479439321919061072615397885985697748491858771380634014813",
+      "event": "Illinois Fighting Illini vs. Iowa Hawkeyes (W)",
+      "outcome": "Iowa Hawkeyes",
+      "strategy": "CWBB",
+      "entry_price": 0.96,
+      "shares": 41.98630708333334,
+      "cost": 40.3068548,
+      "market_id": "1402408",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:55:19.741046+00:00"
+    },
+    {
+      "token_id": "94635636864972525933895700435245525261552716227633522855942113527061922953767",
+      "event": "Montana State Bobcats vs. Portland State Vikings (W)",
+      "outcome": "Montana State Bobcats",
+      "strategy": "CWBB",
+      "entry_price": 0.96,
+      "shares": 41.98630708333334,
+      "cost": 40.3068548,
+      "market_id": "1402343",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:55:19.741747+00:00"
+    },
+    {
+      "token_id": "24470240525586321617294493034514875763205371573169832231697306563950801714691",
+      "event": "Abilene Christian Wildcats vs. Utah Tech Trailblazers",
+      "outcome": "Utah Tech Trailblazers",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.96,
+      "shares": 41.98630708333334,
+      "cost": 40.3068548,
+      "market_id": "1404505",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:55:19.742828+00:00"
+    },
+    {
+      "token_id": "2326411250802664645103994674996684025320583919790017979176013766359087337",
+      "event": "Montana Grizzlies vs. Sacramento State Hornets (W)",
+      "outcome": "Sacramento State Hornets",
+      "strategy": "CWBB",
+      "entry_price": 0.97,
+      "shares": 41.553458556701045,
+      "cost": 40.30685480000001,
+      "market_id": "1402360",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:55:19.743210+00:00"
+    },
+    {
+      "token_id": "87056772426720829863214620058227859513375567411275950986442291900482745845531",
+      "event": "Hawaii Rainbow Warriors vs. UC Davis Aggies",
+      "outcome": "Hawaii Rainbow Warriors",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.97,
+      "shares": 41.553458556701045,
+      "cost": 40.30685480000001,
+      "market_id": "1404672",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:55:19.743489+00:00"
+    },
+    {
+      "token_id": "14902656331355042032183799789504794689395011235563460996775183639765688831521",
+      "event": "UC Riverside Highlanders vs. UC Santa Barbara Gauchos",
+      "outcome": "UC Santa Barbara Gauchos",
+      "strategy": "NCAA_CBB",
+      "entry_price": 0.976,
+      "shares": 41.29800696721313,
+      "cost": 40.30685480000001,
+      "market_id": "1404678",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T03:55:19.743778+00:00"
+    }
+  ],
+  "closed": []
+}

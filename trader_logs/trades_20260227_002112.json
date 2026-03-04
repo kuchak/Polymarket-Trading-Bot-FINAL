@@ -1,0 +1,18 @@
+{
+  "bankroll": 288.48826349999996,
+  "wagered": 32.0542515,
+  "pnl": 0,
+  "open": [
+    {
+      "token_id": "103785261316224336794488184175485536138914061927200659539294226528904436755644",
+      "event": "Tigre 2: Diego Dedura-Palomero vs Juan Manuel La Serna",
+      "outcome": "Dedura-Palomero",
+      "strategy": "Tennis",
+      "entry_price": 0.9,
+      "shares": 35.615835,
+      "cost": 32.0542515,
+      "entry_ts": "2026-02-26T16:21:16.099936+00:00"
+    }
+  ],
+  "closed": []
+}

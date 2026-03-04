@@ -15,6 +15,7 @@ This repository is in its initial state. As the project grows, document the dire
 ```
 /
 ├── CLAUDE.md          # AI assistant guidance (this file)
+├── planning/          # Plans, strategies, and roadmaps (.md files)
 └── (project files)    # To be added
 ```
 
@@ -69,9 +70,18 @@ No architecture decisions have been recorded yet. Update this section as the pro
 
 <!-- List important files and their purposes as they are created -->
 
-| File       | Purpose                       |
-| ---------- | ----------------------------- |
-| CLAUDE.md  | AI assistant guidance         |
+| File        | Purpose                                  |
+| ----------- | ---------------------------------------- |
+| CLAUDE.md   | AI assistant guidance                    |
+| planning/   | Plans, strategies, and roadmap documents |
+
+## Planning & Strategy Documents
+
+All planning documents, strategy write-ups, and architectural plans live in the `./planning/` folder as Markdown files.
+
+- When the user asks for a plan, strategy, roadmap, or any forward-looking document, save it as a `.md` file in `./planning/`
+- Use descriptive filenames with kebab-case (e.g., `api-migration-plan.md`, `q2-growth-strategy.md`)
+- If the `./planning/` folder doesn't exist yet, create it before writing the document
 
 ## Notes for AI Assistants
 

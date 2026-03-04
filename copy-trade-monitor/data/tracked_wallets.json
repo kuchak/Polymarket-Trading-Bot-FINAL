@@ -1,0 +1,142 @@
+[
+  {
+    "address": "0xe90bec87d9ef430f27f9dcfe72c34b76967d5da2",
+    "username": "gmanas",
+    "pnl": 495858.5726275496,
+    "volume": 2586093.126088,
+    "rank": 1
+  },
+  {
+    "address": "0xe20a1538293903b746ffe6c4ce2d5c3c0300e469",
+    "username": "gopatriots",
+    "pnl": 292641.5802730118,
+    "volume": 618317.855711,
+    "rank": 2
+  },
+  {
+    "address": "0x96489abcb9f583d6835c8ef95ffc923d05a86825",
+    "username": "anoin123",
+    "pnl": 211394.91093233114,
+    "volume": 331697.00958500005,
+    "rank": 3
+  },
+  {
+    "address": "0x8e433d051bfb5cc6a1f7e5a0452029b7ffb4a3cd",
+    "username": "hotdogcat",
+    "pnl": 183681.10050185592,
+    "volume": 1446272.5887589997,
+    "rank": 4
+  },
+  {
+    "address": "0xc6b6ffce6c52b6fdf4bad57de303939f19ab13ac",
+    "username": "RealityTwister",
+    "pnl": 182516.50866072945,
+    "volume": 0.0,
+    "rank": 5
+  },
+  {
+    "address": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+    "username": "DrPufferfish",
+    "pnl": 181004.28954751132,
+    "volume": 2789450.7955279993,
+    "rank": 6
+  },
+  {
+    "address": "0xead152b855effa6b5b5837f53b24c0756830c76a",
+    "username": "elkmonkey",
+    "pnl": 163621.3733512228,
+    "volume": 1203093.694379,
+    "rank": 7
+  },
+  {
+    "address": "0x507e52ef684ca2dd91f90a9d26d149dd3288beae",
+    "username": "GamblingIsAllYouNeed",
+    "pnl": 162200.06988740357,
+    "volume": 1171594.539716,
+    "rank": 8
+  },
+  {
+    "address": "0x1455445e9a775cfa3fe9fc4b02bb4d2f682ae5cd",
+    "username": "c4c4",
+    "pnl": 113666.14304117952,
+    "volume": 241906.986994,
+    "rank": 9
+  },
+  {
+    "address": "0x0b9cae2b0dfe7a71c413e0604eaac1c352f87e44",
+    "username": "geniusMC",
+    "pnl": 101907.15908912168,
+    "volume": 1816927.9550069997,
+    "rank": 10
+  },
+  {
+    "address": "0x84dbb7103982e3617704a2ed7d5b39691952aeeb",
+    "username": "ShucksIt69",
+    "pnl": 96928.89835665922,
+    "volume": 277856.862471,
+    "rank": 11
+  },
+  {
+    "address": "0xdc876e6873772d38716fda7f2452a78d426d7ab6",
+    "username": "432614799197",
+    "pnl": 94788.90352342604,
+    "volume": 0.0,
+    "rank": 12
+  },
+  {
+    "address": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee",
+    "username": "kch123",
+    "pnl": 94407.91790888086,
+    "volume": 0.0,
+    "rank": 13
+  },
+  {
+    "address": "0xada56a3f1a9d7d3fe7ec8cbcaa0865109c57db70",
+    "username": "GetaLife",
+    "pnl": 81845.38220410651,
+    "volume": 423611.966156,
+    "rank": 14
+  },
+  {
+    "address": "0xdbade4c82fb72780a0db9a38f821d8671aba9c95",
+    "username": "SwissMiss",
+    "pnl": 81294.30601849267,
+    "volume": 21593.955575,
+    "rank": 15
+  },
+  {
+    "address": "0x336151559e8c8b048de5231dc8313e196b314363",
+    "username": "0x336151559E8C8b048DE5231dC8313E196B31436",
+    "pnl": 74547.27819035969,
+    "volume": 254821.15000000002,
+    "rank": 16
+  },
+  {
+    "address": "0xad95d5b11182a9c7bb8641e621fb289926ddce80",
+    "username": "0xad95D5B11182a9C7bB8641e621fb289926DdcE80-1771510069027",
+    "pnl": 68900.189515,
+    "volume": 0.0,
+    "rank": 17
+  },
+  {
+    "address": "0x08c59894c5e32f0e5406799e49a9a33f4b7643ed",
+    "username": "shan776",
+    "pnl": 66141.11902325304,
+    "volume": 468960.2931579999,
+    "rank": 18
+  },
+  {
+    "address": "0xc408cf3d54aedccbb5c604fc887a1a8a8d93c1ef",
+    "username": "GeorgeIII",
+    "pnl": 56036.878227625144,
+    "volume": 118987.6049,
+    "rank": 19
+  },
+  {
+    "address": "0xc660ae71765d0d9eaf5fa8328c1c959841d2bd28",
+    "username": "TradeurSanders",
+    "pnl": 52718.481209840276,
+    "volume": 625143.437092,
+    "rank": 20
+  }
+]

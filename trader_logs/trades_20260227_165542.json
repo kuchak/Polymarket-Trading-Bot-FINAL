@@ -1,0 +1,81 @@
+{
+  "bankroll": 94.20827321514386,
+  "wagered": 194.33577208595506,
+  "pnl": -362.40812057635065,
+  "total_exposure": 194.33577208595506,
+  "open": [
+    {
+      "token_id": "80556610158933353965247681470017330484255080942554967621070177559900590788265",
+      "event": "Pune: Felix Gill vs Maks Kasnikowski",
+      "outcome": "Maks Kasnikowski",
+      "strategy": "ATP",
+      "entry_price": 0.9,
+      "shares": 42.67231933333334,
+      "cost": 38.405087400000006,
+      "market_id": "1448553",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T09:08:11.320676+00:00"
+    },
+    {
+      "token_id": "47678307314225736497568689359158142815909770570109984016476775819939405874774",
+      "event": "Pune: Alastair Gray vs Federico Cina",
+      "outcome": "Cina",
+      "strategy": "ATP",
+      "entry_price": 0.89,
+      "shares": 38.479873595505616,
+      "cost": 34.2470875,
+      "market_id": "1434065",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T09:17:31.383032+00:00"
+    },
+    {
+      "token_id": "99155607126605916499423598411221782684474851617874616836926625490881249379527",
+      "event": "Antalya: Moyuka Uchijima vs Despina Papamichail",
+      "outcome": "Moyuka Uchijima",
+      "strategy": "WTA",
+      "entry_price": 0.9,
+      "shares": 33.87231988888889,
+      "cost": 30.485087900000003,
+      "market_id": "1444179",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T09:45:22.338331+00:00"
+    },
+    {
+      "token_id": "61789702576160560314066324286037715905159961642319500717587932230331170517713",
+      "event": "WTT - Men's Singles: Truls Moeregaardh vs Thibault Poret",
+      "outcome": "Moeregaardh",
+      "strategy": "WTT_Men",
+      "entry_price": 0.89,
+      "shares": 34.86246683815175,
+      "cost": 31.027595485955057,
+      "market_id": "1436302",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T10:00:07.001229+00:00"
+    },
+    {
+      "token_id": "61357573117926119048267836829850420275597406500397634265147607125860069604521",
+      "event": "Antalya: Veronika Erjavec vs Nuria Brancaccio",
+      "outcome": "Veronika Erjavec",
+      "strategy": "WTA",
+      "entry_price": 0.91,
+      "shares": 34.70839626373626,
+      "cost": 31.5846406,
+      "market_id": "1444188",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T11:19:43.305697+00:00"
+    },
+    {
+      "token_id": "68316356636445655468286693033280539296502747381521128050584273340937153314958",
+      "event": "Pune: Manoj Dhamne Manas vs Duje Ajdukovic",
+      "outcome": "Manoj Dhamne Manas",
+      "strategy": "ATP",
+      "entry_price": 0.89,
+      "shares": 32.11940808988764,
+      "cost": 28.5862732,
+      "market_id": "1436316",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T11:30:07.107638+00:00"
+    }
+  ],
+  "closed": []
+}

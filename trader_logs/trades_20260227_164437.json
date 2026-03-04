@@ -1,0 +1,21 @@
+{
+  "bankroll": 275.46737759999996,
+  "wagered": 30.6074864,
+  "pnl": 0,
+  "total_exposure": 30.6074864,
+  "open": [
+    {
+      "token_id": "14979619483967217617818199415529891986941911781856516028842657579434017001562",
+      "event": "Nets vs. Celtics",
+      "outcome": "Celtics",
+      "strategy": "NBA",
+      "entry_price": 0.91,
+      "shares": 33.63460043956044,
+      "cost": 30.6074864,
+      "market_id": "1407880",
+      "scale_count": 0,
+      "entry_ts": "2026-02-27T08:44:43.533091+00:00"
+    }
+  ],
+  "closed": []
+}

@@ -1,0 +1,107 @@
+{
+  "bankroll": 247.02617105962375,
+  "wagered": 193.14197020037625,
+  "pnl": 11.918484760699808,
+  "open": [
+    {
+      "token_id": "42979250651683149457730950385356612976918777304324302948654585599937606338636",
+      "event": "Pittsburgh Panthers vs. Miami Hurricanes (W)",
+      "outcome": "Miami Hurricanes",
+      "strategy": "NCAAB",
+      "entry_price": 0.95,
+      "shares": 24.793362814736845,
+      "cost": 23.553694674000003,
+      "entry_ts": "2026-02-26T13:30:05.011019+00:00"
+    },
+    {
+      "token_id": "30102600535787917639445954543867983315144615304768619653687482875613991555649",
+      "event": "Eastern Illinois Panthers vs. Lindenwood Lions (W)",
+      "outcome": "Lindenwood Lions",
+      "strategy": "NCAAB",
+      "entry_price": 0.955,
+      "shares": 22.197199169214663,
+      "cost": 21.198325206600003,
+      "entry_ts": "2026-02-26T13:30:06.027044+00:00"
+    },
+    {
+      "token_id": "54414722264651367046653444002640597654922547479929804994099401693700968898197",
+      "event": "Georgia Bulldogs vs. Texas Longhorns (W)",
+      "outcome": "Texas Longhorns",
+      "strategy": "NCAAB",
+      "entry_price": 0.955,
+      "shares": 13.071683955204183,
+      "cost": 12.483458177219994,
+      "entry_ts": "2026-02-26T13:30:06.957353+00:00"
+    },
+    {
+      "token_id": "94635636864972525933895700435245525261552716227633522855942113527061922953767",
+      "event": "Montana State Bobcats vs. Portland State Vikings (W)",
+      "outcome": "Montana State Bobcats",
+      "strategy": "NCAAB",
+      "entry_price": 0.95,
+      "shares": 9.355926026141063,
+      "cost": 8.888129724834009,
+      "entry_ts": "2026-02-26T14:16:25.109592+00:00"
+    },
+    {
+      "token_id": "11267090541160594633871107456522003185305360790022863748921737131280394835174",
+      "event": "Lugano: Marc-Andrea Huesler vs Daniil Glinka",
+      "outcome": "Marc-Andrea Huesler",
+      "strategy": "Tennis",
+      "entry_price": 0.855,
+      "shares": 24.739636984484918,
+      "cost": 21.152389621734603,
+      "entry_ts": "2026-02-26T14:20:18.328615+00:00"
+    },
+    {
+      "token_id": "67453208368804601708843807920264143677665463891039361842826224273910867162163",
+      "event": "Vermont Catamounts vs. Massachusetts-Lowell River Hawks (W)",
+      "outcome": "Vermont Catamounts",
+      "strategy": "NCAAB",
+      "entry_price": 0.955,
+      "shares": 24.2609562262088,
+      "cost": 23.169213196029403,
+      "entry_ts": "2026-02-26T15:11:15.077561+00:00"
+    },
+    {
+      "token_id": "26708339149260225347843014392543948970015578439039992081179614283473380306625",
+      "event": "Tigre 2: Joaquin Aguilar vs Juan Pablo Varillas",
+      "outcome": "Varillas",
+      "strategy": "Tennis",
+      "entry_price": 0.88,
+      "shares": 31.19017311358886,
+      "cost": 27.447352339958197,
+      "entry_ts": "2026-02-26T15:14:42.073247+00:00"
+    }
+  ],
+  "closed": [
+    {
+      "token_id": "111511514240187408362199657661290064504195685749984927952116807557987349611317",
+      "event": "WTT - Men's Singles: Chuqin Wang vs Anders Lind",
+      "outcome": "Wang",
+      "strategy": "TableTennis",
+      "entry_price": 0.7665,
+      "shares": 37.93690202217874,
+      "cost": 29.078635400000003,
+      "entry_ts": "2026-02-26T13:30:03.193287+00:00",
+      "pnl": 8.478897601956952,
+      "won": true,
+      "exit_price": 0.99,
+      "exit_ts": "2026-02-26T13:59:24.574570+00:00"
+    },
+    {
+      "token_id": "56436656116627149816977902171240800049416072415582497849146170146343548161211",
+      "event": "Dubai Tennis Championships: Felix Auger-Aliassime vs Jiri Lehecka",
+      "outcome": "Felix Auger-Aliassime",
+      "strategy": "Tennis",
+      "entry_price": 0.875,
+      "shares": 29.909453554285715,
+      "cost": 26.170771860000002,
+      "entry_ts": "2026-02-26T13:30:03.877960+00:00",
+      "pnl": 3.4395871587428566,
+      "won": true,
+      "exit_price": 0.99,
+      "exit_ts": "2026-02-26T14:08:41.328413+00:00"
+    }
+  ]
+}
