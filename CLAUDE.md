@@ -83,6 +83,66 @@ All planning documents, strategy write-ups, and architectural plans live in the 
 - Use descriptive filenames with kebab-case (e.g., `api-migration-plan.md`, `q2-growth-strategy.md`)
 - If the `./planning/` folder doesn't exist yet, create it before writing the document
 
+## Bot Components
+
+| Bot | Script | Purpose |
+|-----|--------|---------|
+| Monitor | `polymarket_monitor.py` | Market data collection (30s cycles) |
+| Trader | `polymarket_trader.py` | Live sports trading bot |
+| Whale Tracker | `whale-tracker/whale_tracker.py` | Whale & insider trade alerts (60s cycles) |
+| Copy Trade | `copy-trade-monitor/copy_trade_monitor.py` | Leaderboard copy-trade tracker |
+
+### Running Bots
+
+```bash
+# Monitor
+nohup python3 polymarket_monitor.py > nohup.out 2>&1 &
+
+# Trader (--no-confirm for background mode)
+nohup python3 polymarket_trader.py --no-confirm > trader_output.log 2>&1 &
+
+# Whale Tracker
+cd whale-tracker && nohup python3 whale_tracker.py > ../whale.log 2>&1 &
+```
+
+## Trader Bot Parameters (as of March 4, 2026)
+
+### Risk Controls
+| Parameter | Value |
+|-----------|-------|
+| MIN_LIQUIDITY | $50,000 |
+| MAX_TOTAL_EXPOSURE | 100% |
+| MAX_PER_MARKET | 20% |
+| DEFAULT_BET | 15% |
+| Stop-loss | Sell when prob <= 40% |
+
+### Entry Thresholds
+| Sport | Threshold | Min Elapsed | Hist Winrate |
+|-------|-----------|-------------|-------------|
+| ATP | 94% | 45 min | 95.8% |
+| WTA | 92% | 30 min | 94.1% |
+| NCAA_CBB | 93% | 60 min | 96.4% |
+| CWBB | 90% | 45 min | 94.7% |
+| NBA | 91% | 0 min | 100% |
+| NHL | 93% | 30 min | 90% |
+| WTT_Women | 88% | 0 min | 100% |
+| WTT_Men | 88% | 0 min | 100% |
+
+### Performance (102 trades, Feb 26 - Mar 4, 2026)
+- 96W/6L (94.1%), net PnL +$10.09
+- Best: WTA (+$34.81, 19-0), NBA (+$31.43, 24-1)
+- Worst: NCAA_CBB (-$53.52, 28-2), ATP (-$14.55, 23-3)
+- Full analysis: `planning/trading-bot-performance-analysis.md`
+
+## Changelog
+
+### 2026-03-04: Parameter Optimization v7
+- Entry thresholds raised: ATP 93%→94%, NCAA_CBB 92%→93%, CWBB 85%→90%, NBA 88%→91%, WTT 83%→88%
+- Stop-loss: sell at prob <= 40% (was 10%) — catches losses earlier
+- MIN_LIQUIDITY: $20k→$50k — filters thin Challenger/ITF markets
+- Scale-in: remains disabled
+- Added `--no-confirm` flag to skip interactive GO prompt for background mode
+
 ## Notes for AI Assistants
 
 - This is a new repository — verify what files exist before assuming project structure

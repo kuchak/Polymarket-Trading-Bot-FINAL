@@ -19,13 +19,13 @@ from datetime import datetime, timedelta, timezone
 from collections import defaultdict
 from dotenv import load_dotenv
 
-load_dotenv(os.path.expanduser("~/polymarket/.env"))
+load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
 INITIAL_BANKROLL = 360.0
 STATE_FILE = os.path.expanduser("~/polymarket/bot_state.json")
 POLL_INTERVAL = 45
 MIN_BET = 1.0
-MIN_LIQUIDITY = 20000
+MIN_LIQUIDITY = 50000
 GAMMA_API = "https://gamma-api.polymarket.com"
 CLOB_API = "https://clob.polymarket.com"
 TAG_ID = 100639
@@ -33,7 +33,7 @@ TAG_ID = 100639
 # --- Risk controls ---
 MAX_TOTAL_EXPOSURE_PCT = 1.00
 MAX_PER_MARKET_PCT = 0.20
-DEFAULT_BET_PCT = 0.15
+DEFAULT_BET_PCT = 0.20
 
 # --- Periods that mean game is NOT in progress ---
 NON_LIVE_PERIODS = {'FT', 'VFT', 'Final', 'CAN', 'POST', 'Scheduled', ''}
@@ -41,7 +41,7 @@ NON_LIVE_PERIODS = {'FT', 'VFT', 'Final', 'CAN', 'POST', 'Scheduled', ''}
 STRATEGIES = {
     'ATP': {
         'slug_prefixes': {'atp-'},
-        'entry_threshold': 0.93,
+        'entry_threshold': 0.94,
         'max_per_bet_pct': DEFAULT_BET_PCT,
         'min_elapsed_min': 45,
         'est_remaining_min': 60,
@@ -59,25 +59,27 @@ STRATEGIES = {
     },
     'NCAA_CBB': {
         'slug_prefixes': {'cbb-'},
-        'entry_threshold': 0.92,
+        'entry_threshold': 0.93,
         'max_per_bet_pct': DEFAULT_BET_PCT,
         'min_elapsed_min': 60,
         'est_remaining_min': 60,
         'hist_winrate': 0.964,
         'scale_in': False,
+        'min_liquidity': 20000,
     },
     'CWBB': {
         'slug_prefixes': {'cwbb-'},
-        'entry_threshold': 0.85,
+        'entry_threshold': 0.90,
         'max_per_bet_pct': DEFAULT_BET_PCT,
         'min_elapsed_min': 45,
         'est_remaining_min': 60,
         'hist_winrate': 0.947,
         'scale_in': False,
+        'min_liquidity': 20000,
     },
     'NBA': {
         'slug_prefixes': {'nba-'},
-        'entry_threshold': 0.88,
+        'entry_threshold': 0.91,
         'max_per_bet_pct': DEFAULT_BET_PCT,
         'min_elapsed_min': 0,
         'est_remaining_min': 60,
@@ -95,7 +97,7 @@ STRATEGIES = {
     },
     'WTT_Women': {
         'slug_prefixes': {'wttwmn-'},
-        'entry_threshold': 0.83,
+        'entry_threshold': 0.88,
         'max_per_bet_pct': DEFAULT_BET_PCT,
         'min_elapsed_min': 0,
         'est_remaining_min': 30,
@@ -104,7 +106,7 @@ STRATEGIES = {
     },
     'WTT_Men': {
         'slug_prefixes': {'wttmen-'},
-        'entry_threshold': 0.83,
+        'entry_threshold': 0.88,
         'max_per_bet_pct': DEFAULT_BET_PCT,
         'min_elapsed_min': 0,
         'est_remaining_min': 30,
@@ -391,6 +393,7 @@ class TradingBot:
         self.scan_count = 0
         self.total_wagered = 0
         self.total_pnl = 0
+        self._early_probs: dict = {}  # {token_id: float} implied_prob captured on first observation
         self.trade_log_file = os.path.join(
             LOG_DIR, f"trades_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
 
@@ -477,7 +480,7 @@ class TradingBot:
             action = None
             if prob >= 0.99:
                 action = 'SELL_WIN'
-            elif prob <= 0.10:
+            elif prob <= 0.40:
                 action = 'SELL_LOSS'
             if not action:
                 continue
@@ -573,7 +576,7 @@ class TradingBot:
             elif cur_price < 0.01:
                 logger.info(f"  💀 WRITE-OFF | {outcome[:25]} | {size:.1f} shr — resolved loss, skipping")
                 continue
-            elif avg_price > 0 and cur_price <= 0.25:
+            elif avg_price > 0 and cur_price <= 0.40:
                 action = "STOP_LOSS"
 
             if not action:
@@ -658,7 +661,8 @@ class TradingBot:
                 continue
             if m['game_elapsed'] < cfg['min_elapsed_min']:
                 continue
-            if m['liquidity'] < MIN_LIQUIDITY:
+            min_liq = cfg.get('min_liquidity', MIN_LIQUIDITY)
+            if m['liquidity'] < min_liq:
                 continue
 
             evh = calc_ev_per_hour(prob, m['strategy'], m['game_elapsed'])
@@ -690,15 +694,12 @@ class TradingBot:
 
             cfg = STRATEGIES[c['strategy']]
             bet_size = min(
-                max(self.bankroll / 5, 20),
+                max(total_capital * DEFAULT_BET_PCT, 20),
                 market_room,
                 max_deploy,
-                self.bankroll,
             )
-            if self.bankroll < 5:
-                continue
-            if bet_size > self.bankroll:
-                bet_size = self.bankroll
+            if self.bankroll < bet_size:
+                continue   # insufficient cash for a full bet — wait for a position to close
             if bet_size < 5:
                 continue
 
@@ -899,6 +900,14 @@ class TradingBot:
                         f"{m['game_elapsed']:.0f}m | {period} {score} | "
                         f"Liq:${m['liquidity']:.0f} | {m['strategy']}")
 
+        # Capture match-start probability for ATP/WTA on first observation
+        for m in markets:
+            if m['strategy'] in ('ATP', 'WTA'):
+                tid = m['token_id']
+                if tid and tid not in self._early_probs:
+                    self._early_probs[tid] = m['implied_prob']
+                    logger.debug(f"  📌 Match-start prob {m['outcome'][:20]}: {m['implied_prob']:.2f} @ {m['game_elapsed']:.0f}m")
+
         self.check_exits(markets)
         self.check_exits_from_api()
         cands = self.find_opportunities(markets)
@@ -958,11 +967,13 @@ class TradingBot:
 def main():
     dry_run = "--dry-run" in sys.argv
     once = "--once" in sys.argv
+    no_confirm = "--no-confirm" in sys.argv
     if not dry_run:
         print(f"\n⚠️  LIVE — Bankroll: ${INITIAL_BANKROLL:.2f}")
-        if input("Type 'GO': ").strip() != "GO":
-            print("Aborted.")
-            sys.exit(0)
+        if not no_confirm:
+            if input("Type 'GO': ").strip() != "GO":
+                print("Aborted.")
+                sys.exit(0)
     else:
         print(f"\n🧪 DRY RUN\n")
 
