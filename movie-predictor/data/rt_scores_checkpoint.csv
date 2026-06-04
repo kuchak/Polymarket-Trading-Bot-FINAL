@@ -1,251 +1,101 @@
-title,year,release_date,rt_slug,wayback_timestamp,rt_score_release_day,rt_reviews_release_day,rt_audience_release_day,rt_score_final,rt_reviews_final,rt_audience_final
-Bad Boys for Life,2020,2020-01-17,bad_boys_for_life,20200111005013.0,,,,76.0,269.0,96.0
-1917,2020,Dec 25,1917_2019,,,,,88.0,474.0,88.0
-Sonic the Hedgehog,2020,2020-02-14,sonic_the_hedgehog,,,,,78.0,349.0,78.0
-Jumanji: The Next Level,2020,2019-12-13,jumanji_the_next_level,,,,,72.0,248.0,87.0
-Star Wars: Episode IX - The Rise of Skywalker,2020,2019-12-20,,,,,,,,
-Birds of Prey and the Fantabulous Emancipation of One Harley Quinn,2020,2020-02-07,birds_of_prey_2020,20200205171006.0,,,,79.0,449.0,78.0
-Dolittle,2020,2020-01-17,dolittle,20200116010808.0,13.0,54.0,,15.0,240.0,76.0
-Little Women,2020,2019-12-25,,,,,,,,
-The Invisible Man,2020,2020-02-28,the_invisible_man_2020,,,,,91.0,422.0,88.0
-The Call of the Wild,2020,2020-02-21,the_call_of_the_wild_2020,20200220184154.0,70.0,66.0,,63.0,212.0,89.0
-Onward,2020,2020-03-06,onward,20200305193735.0,87.0,154.0,,88.0,346.0,95.0
-Tenet,2020,2020-09-03,tenet,20200902043026.0,78.0,148.0,,70.0,379.0,76.0
-Knives Out,2020,2019-11-27,knives_out,20191127180248.0,96.0,223.0,,97.0,471.0,92.0
-Frozen II,2020,2019-11-22,frozen_ii,20191121001703.0,77.0,119.0,,77.0,341.0,92.0
-Spies in Disguise,2020,2019-12-25,spies_in_disguise,20191224031840.0,78.0,45.0,,76.0,123.0,92.0
-The Gentlemen,2020,2020-01-24,the_gentlemen,20200123125215.0,76.0,71.0,,75.0,277.0,84.0
-Just Mercy,2020,Dec 25,just_mercy,,,,,85.0,310.0,99.0
-The Croods: A New Age,2020,2020-11-25,the_croods_a_new_age,20201118040249.0,,,,77.0,156.0,94.0
-Parasite,2020,Oct 11,,,,,,,,
-Fantasy Island,2020,2020-02-14,fantasy_island,,,,,86.0,2.0,86.0
-Uncut Gems,2020,Dec 13,uncut_gems,,,,,91.0,350.0,52.0
-The New Mutants,2020,2020-08-28,the_new_mutants,20200821234411.0,,,,36.0,136.0,55.0
-Wonder Woman 1984,2020,2020-12-25,wonder_woman_1984,20201224010527.0,75.0,186.0,,57.0,455.0,73.0
-Like a Boss,2020,2020-01-10,like_a_boss,20200109202528.0,25.0,40.0,,22.0,159.0,65.0
-The Grudge,2020,2020-01-03,the_grudge,,,,,41.0,163.0,46.0
-Unhinged,2020,Aug 14,unhinged,,,,,27.0,49.0,27.0
-The Photograph,2020,2020-02-14,the-photograph,,,,,62.0,10.0,62.0
-The War with Grandpa,2020,2020-10-09,the_war_with_grandpa,20201013204522.0,30.0,84.0,,29.0,121.0,85.0
-Underwater,2020,2020-01-10,underwater,,,,,13.0,6.0,13.0
-The Turning,2020,2020-01-24,the_turning,,,,,86.0,28.0,54.0
-Gretel & Hansel,2020,2020-01-31,gretel_and_hansel,20200130173906.0,,,,63.0,115.0,23.0
-My Hero Academia: Heroes Rising,2020,2020-02-26,my_hero_academia_heroes_rising,20200301200133.0,91.0,22.0,,92.0,39.0,98.0
-Bombshell,2020,Dec 13,bombshell,,,,,0.0,0.0,0.0
-The Way Back,2020,-,the_way_back,,,,,73.0,137.0,72.0
-Brahms: The Boy II,2020,2020-02-21,brahms_the_boy_ii,,,,,11.0,56.0,44.0
-Jojo Rabbit,2020,Oct 18,jojo_rabbit,,,,,81.0,432.0,94.0
-Impractical Jokers: The Movie,2020,Feb 21,impractical_jokers_the_movie,,,,,36.0,25.0,76.0
-Ford v Ferrari,2020,2019-11-15,ford_v_ferrari,20191114155555.0,90.0,134.0,,92.0,363.0,98.0
-Emma.,2020,Feb 21,emma_2020,,,,,86.0,260.0,72.0
-Bloodshot,2020,2020-03-13,bloodshot,,,,,29.0,3.0,29.0
-I Still Believe,2020,2020-03-13,i_still_believe,,,,,50.0,48.0,98.0
-Come Play,2020,2020-10-30,come_play,,,,,57.0,120.0,67.0
-Let Him Go,2020,2020-11-06,let_him_go,20201102143202.0,,,,85.0,197.0,76.0
-Freaky,2020,2020-11-13,freaky,20201113191833.0,85.0,108.0,,84.0,253.0,80.0
-Downhill,2020,2020-02-14,downhill,,,,,89.0,9.0,62.0
-Weathering with You,2020,2020-01-15,weathering_with_you,20200108210308.0,100.0,27.0,,92.0,98.0,95.0
-Cats,2020,2019-12-20,cats_2020,,,,,27.0,43.0,27.0
-The Hunt,2020,2020-03-13,,,,,,,,
-The Rhythm Section,2020,2020-01-31,the_rhythm_section,20200129170509.0,,,,28.0,188.0,44.0
-Monster Hunter,2020,2020-12-18,monster_hunter,,,,,45.0,98.0,70.0
-A Beautiful Day in the Neighborhood,2020,2019-11-22,a_beautiful_day_in_the_neighborhood,20191115184420.0,97.0,95.0,,95.0,380.0,92.0
-Hocus Pocus,2020,2020-10-02,hocus_pocus,,,,,42.0,65.0,72.0
-Richard Jewell,2020,2019-12-13,richard_jewell,20191212190551.0,79.0,82.0,,77.0,299.0,96.0
-The SpongeBob Movie: Sponge on the Run,2020,2020-08-14,the_spongebob_movie_sponge_on_the_run,,,,,66.0,74.0,48.0
-The Broken Hearts Gallery,2020,2020-09-11,the_broken_hearts_gallery,,,,,80.0,117.0,88.0
-Infidel,2020,2020-09-18,infidel_2020,,,,,58.0,12.0,86.0
-News of the World,2020,2020-12-25,news_of_the_world,20201224120226.0,85.0,96.0,,88.0,270.0,89.0
-Portrait of a Lady on Fire,2020,2019-12-06,portrait_of_a_lady_on_fire,20191129023958.0,98.0,95.0,,98.0,337.0,92.0
-Bill & Ted Face the Music,2020,2020-08-28,bill_and_ted_face_the_music,20200828123537.0,80.0,74.0,,83.0,267.0,64.0
-2020 Oscar Nominated Short Films,2020,2020-01-31,,,,,,,,
-Queen & Slim,2020,2019-11-27,queen_and_slim,20191129023944.0,85.0,80.0,,82.0,233.0,92.0
-The Empty Man,2020,2020-10-23,the_empty_man,,,,,73.0,30.0,39.0
-My Boyfriend's Meds,2020,2020-02-21,my_boyfriends_meds,,,,,83.0,95.0,83.0
-The Last Full Measure,2020,2020-01-24,the_last_full_measure,20200123191515.0,63.0,27.0,,62.0,78.0,96.0
-Words on Bathroom Walls,2020,2020-08-21,words_on_bathroom_walls,20200821235523.0,85.0,33.0,,89.0,92.0,94.0
-Star Wars: Episode V - The Empire Strikes Back,2020,2020-07-10,star_wars_episode_v_the_empire_strikes_back,,,,,93.0,174.0,97.0
-Fatale,2020,2020-12-18,fatale,20201221075845.0,50.0,26.0,,46.0,70.0,87.0
-The Nightmare Before Christmas,2020,2020-10-16,the_nightmare_before_christmas,,,,,95.0,107.0,91.0
-Ip Man 4: The Finale,2020,2019-12-25,ip_man_4_the_finale,20191224032144.0,86.0,14.0,,85.0,34.0,95.0
-Half Brothers,2020,2020-12-04,half_brothers_2020,,,,,36.0,44.0,80.0
-Elf,2020,2020-11-13,elf,20201117200254.0,84.0,194.0,,85.0,204.0,79.0
-The Personal History of David Copperfield,2020,2020-08-28,the_personal_history_of_david_copperfield,20200826154617.0,93.0,104.0,,92.0,249.0,55.0
-The Wretched,2020,2020-05-01,haraamkhor,,,,,67.0,9.0,38.0
-The Lodge,2020,2020-02-07,the_lodge,20200206225501.0,76.0,72.0,,75.0,184.0,51.0
-Joker,2020,2019-10-04,joker,,,,,33.0,4.0,33.0
-The Rental,2020,2020-07-24,4_dead_girls_the_soul_taker_2013,,,,,20.0,1.0,20.0
-Once Upon a Time... in Hollywood,2020,2019-07-26,once_upon_a_time_in_hollywood,20190720062215.0,92.0,65.0,,86.0,580.0,70.0
-Jurassic Park,2020,2020-06-19,jurassic_park,,,,,91.0,203.0,91.0
-2 Hearts,2020,2020-10-16,2_hearts,20201016152618.0,11.0,18.0,,17.0,29.0,87.0
-Promising Young Woman,2020,2020-12-25,promising_young_woman,20201224014912.0,92.0,142.0,,90.0,427.0,87.0
-True to the Game 2,2020,2020-11-06,true_to_the_game_2,,,,,79.0,44.0,79.0
-Peninsula,2020,2020-08-07,train_to_busan_presents_peninsula,,,,,54.0,131.0,76.0
-The Assistant,2020,2020-01-31,the_assistant_2020,,,,,93.0,245.0,25.0
-Love and Monsters,2020,2020-10-16,love_and_monsters,20201018142702.0,90.0,39.0,,94.0,116.0,89.0
-Relic,2020,2020-07-03,relic,,,,,91.0,235.0,51.0
-The Tax Collector,2020,2020-08-07,the_tax_collector,20200806134613.0,22.0,18.0,,17.0,69.0,73.0
-The Last Shift,2020,2020-09-25,the_last_shift,,,,,66.0,35.0,37.0
-Becky,2020,2020-06-05,becky_2020,20200607211529.0,66.0,65.0,,72.0,121.0,52.0
-The Song of Names,2020,2019-12-25,the_song_of_names,20191224032145.0,44.0,16.0,,39.0,56.0,90.0
-All My Life,2020,2020-12-04,all_my_life_2020,20201127091628.0,,,,59.0,46.0,63.0
-Mafia Inc,2020,2020-02-14,,,,,,,,
-National Lampoon's Christmas Vacation,2020,2020-11-25,national_lampoons_christmas_vacation,20201127180505.0,68.0,47.0,,72.0,58.0,86.0
-Jay and Silent Bob Reboot,2020,2019-10-15,jay_and_silent_bob_reboot,20191014130651.0,,,,67.0,39.0,93.0
-A Hidden Life,2020,2019-12-13,,,,,,,,
-Cut Throat City,2020,2020-08-21,cut_throat_city,,,,,72.0,43.0,38.0
-The Goonies,2020,2020-07-10,goonies,,,,,77.0,65.0,90.0
-Sarileru Neekevvaru,2020,2020-01-10,sarileru_neekevvaru,,,,,64.0,72.0,64.0
-Vanguard,2020,2020-11-20,vanguard,20201120173019.0,21.0,34.0,,29.0,69.0,51.0
-21 Bridges,2020,2019-11-22,21_bridges,20191121182606.0,43.0,44.0,,55.0,138.0,91.0
-Jaws,2020,2020-06-19,jaws,,,,,97.0,178.0,98.0
-Possessor,2020,2020-10-02,possessor_uncut,,,,,94.0,226.0,59.0
-After We Collided,2020,2020-10-23,after_we_collided,,,,,13.0,16.0,93.0
-Coco,2020,2017-11-22,coco,,,,,15.0,31.0,15.0
-Toy Story,2020,2020-11-06,toy_story,20201106232753,100.0,90,,100.0,161.0,92.0
-"Monsters, Inc.",2020,2020-10-23,monsters_inc,,,,,96.0,191.0,90.0
-Baaghi 3,2020,2020-03-06,baaghi_3,,,,,0.0,12.0,67.0
-The Santa Clause,2020,2020-11-20,,,,,,,,
-Pain and Glory,2020,2019-10-04,pain_and_glory,20191003170315,96.0,124,,96.0,305.0,91.0
-The Polar Express,2020,2020-12-04,the_polar_express,,,,,55.0,210.0,64.0
-The Last Vermeer,2020,2020-11-20,the_last_vermeer,20201122163748,68.0,53,,68.0,78.0,91.0
-The Addams Family,2020,2020-10-23,the_addams_family_2019,,,,,46.0,158.0,70.0
-Merci pour tout,2020,2019-12-25,,,,,,,,
-Maleficent: Mistress of Evil,2020,2019-10-18,maleficent_mistress_of_evil,20191011000623,,,,40.0,258.0,95.0
-Ghostbusters,2020,2020-07-03,ghostbusters,,,,,95.0,83.0,88.0
-Chhapaak,2020,2020-01-10,chhapaak,20200109222203,,,,89.0,18.0,85.0
-Shortcut,2020,2020-09-25,shortcut_2020,,,,,60.0,25.0,24.0
-Panga,2020,2020-01-24,panga_2020,,,,,94.0,17.0,83.0
-Midway,2020,2019-11-08,midway,,,,,39.0,18.0,71.0
-Black Christmas,2020,2019-12-13,black_christmas,,,,,14.0,66.0,38.0
-Synchronic,2020,2020-10-23,synchronic,20201027212042,82.0,100,,79.0,160.0,76.0
-Guardians of the Galaxy,2020,2020-11-13,guardians_of_the_galaxy,20201112021220,91.0,328,,91.0,337.0,92.0
-Color Out of Space,2020,2020-01-24,color_out_of_space,,,,,86.0,213.0,82.0
-Followed,2020,2020-06-19,followed,,,,,76.0,25.0,46.0
-Alone,2020,2020-09-18,alone,,,,,58.0,171.0,58.0
-Harriet,2020,2019-11-01,harriet,20191031105606,71.0,65,,74.0,233.0,97.0
-Kajillionaire,2020,2020-09-25,kajillionaire,20200919191503,94.0,32,,90.0,213.0,47.0
-The Addams Family,2020,2019-10-11,the_addams_family_2019,20191011000611,31.0,29,,46.0,158.0,70.0
-The Big Ugly,2020,2020-07-24,the_big_ugly,,,,,40.0,20.0,77.0
-The Call,2020,2020-10-02,the_call_2020,,,,,46.0,24.0,65.0
-The Grinch,2020,2020-11-27,the_grinch,,,,,60.0,197.0,54.0
-Dark Waters,2020,Nov 22,dark_waters,,,,,71.0,7.0,54.0
-The Forgotten Carols,2020,2020-11-20,the_forgotten_carols,,,,,97.0,42.0,97.0
-Spell,2020,2020-10-30,spell,,,,,0.0,9.0,
-Ava,2020,2020-09-25,ava,,,,,85.0,20.0,67.0
-Pinocchio,2020,2020-12-25,pinocchio,20201228183148,0.0,55,,0.0,54.0,34.0
-Beauty and the Beast,2020,2020-07-17,beauty_and_the_beast,,,,,96.0,67.0,90.0
-Once Were Brothers,2020,2020-02-21,,,,,,,,
-Seberg,2020,2020-02-21,seberg,,,,,36.0,140.0,49.0
-Iron Man,2020,2020-07-17,iron_man,,,,,94.0,278.0,91.0
-Fantastic Fungi,2020,2019-09-20,fantastic_fungi,,,,,100.0,22.0,94.0
-Infamous,2020,2020-06-12,infamous,,,,,75.0,154.0,69.0
-Tulsa,2020,2020-08-21,tulsa,20200820152500,,,,44.0,14.0,44.0
-Stevie Nicks 24 Karat Gold the Concert,2020,2020-10-21,,,,,,,,
-Buddy Games,2020,2020-11-20,the_buddy_games,20201123044211,40.0,1,,16.0,25.0,67.0
-Black Panther,2020,2020-07-10,black_panther,,,,,48.0,7.0,48.0
-The Kid Detective,2020,2020-10-16,the_kid_detective,,,,,85.0,65.0,76.0
-She Dies Tomorrow,2020,2020-07-31,she_dies_tomorrow,20200801170304,84.0,31,,84.0,190.0,24.0
-Greed,2020,2020-02-28,greed_2020,,,,,50.0,149.0,32.0
-Yellow Rose,2020,2020-10-09,yellow_rose,,,,,87.0,53.0,52.0
-Ride Your Wave,2020,2020-02-19,ride_your_wave,,,,,93.0,30.0,84.0
-The Eight Hundred,2020,2020-08-28,the_eight_hundred,,,,,89.0,27.0,78.0
-Les Misérables,2020,2020-01-10,,,,,,,,
-Die Hard,2020,2020-12-04,die_hard,,,,,94.0,89.0,94.0
-Clemency,2020,2019-12-27,,,,,,,,
-Ordinary Love,2020,2020-02-14,ordinary_love,,,,,93.0,109.0,69.0
-Casper,2020,1995-05-26,casper,,,,,59.0,110.0,51.0
-The Informer,2020,2020-11-06,the_informer_2020,,,,,63.0,57.0,62.0
-Playing with Fire,2020,2019-11-08,playing_with_fire,,,,,43.0,4.0,43.0
-Save Yourselves!,2020,2020-10-02,save_yourselves,,,,,89.0,90.0,60.0
-Judy,2020,Sep 27,,,,,,,,
-The Traitor,2020,2020-01-31,the_traitor_2020,,,,,86.0,106.0,73.0
-Gremlins,2020,2020-07-10,gremlins,,,,,86.0,91.0,78.0
-Created Equal: Clarence Thomas in His Own Words,2020,2020-01-31,created_equal_clarence_thomas_in_his_own_words,,,,,35.0,17.0,99.0
-Fatman,2020,2020-11-13,fatman,20201107141306,,,,44.0,117.0,84.0
-An American in Paris,2020,2020-01-19,american_in_paris,,,,,95.0,101.0,78.0
-Wonder Woman,2020,2020-12-11,wonder_woman,,,,,85.0,13.0,78.0
-Back to the Future,2020,2020-07-31,back_to_the_future,20200726150143,96.0,81,,93.0,118.0,95.0
-Bohemian Rhapsody,2020,2020-07-17,bohemian_rhapsody,,,,,60.0,417.0,85.0
-63 Up,2020,2019-11-27,63_up,20191129024329,100.0,13,,98.0,56.0,95.0
-Tokyo Godfathers,2020,2020-03-09,tokyo_godfathers,,,,,92.0,77.0,91.0
-The Climb,2020,2020-11-13,10001205-climb,,,,,73.0,32.0,73.0
-Doctor Who Live Q&A And Screening,2020,2020-01-05,,,,,,,,
-CatVideoFest 2020,2020,2020-02-21,,,,,,,,
-Wild Mountain Thyme,2020,2020-12-11,wild_mountain_thyme,20201210152012,30.0,27,,25.0,134.0,55.0
-The Secrets We Keep,2020,2020-09-16,the_secrets_we_keep,20200910160728,,,,62.0,63.0,42.0
-Fate/stay night [Heaven's Feel] III. spring song,2020,2020-11-18,,,,,,,,
-Ashfall,2020,2019-12-19,ashfall,,,,,70.0,10.0,74.0
-Zombieland: Double Tap,2020,2019-10-18,zombieland_double_tap,20191017000915,75.0,52,,68.0,259.0,88.0
-Cunningham,2020,2019-12-13,cunningham,20191212093156,70.0,10,,89.0,61.0,73.0
-The Doors: Break On Thru - A Celebration Of Ray Manzarek,2020,2020-02-12,the_doors_break_on_thru_a_celebration_of_ray_manzarek,,,,,100.0,6.0,100.0
-The Outpost,2020,2020-07-03,the_outpost_2020,20200630001609,100.0,6,,91.0,99.0,82.0
-The Wolf of Snow Hollow,2020,2020-10-09,the_wolf_of_snow_hollow,,,,,90.0,78.0,63.0
-Come Away,2020,2020-11-13,come_away,20201116005801,36.0,39,,29.0,69.0,49.0
-The Good Liar,2020,2019-11-15,the_good_liar,20191114191541,61.0,51,,64.0,165.0,85.0
-And Then We Danced,2020,2020-02-07,and_then_we_danced,20200207041528,86.0,29,,94.0,93.0,95.0
-Beanpole,2020,2020-01-29,beanpole,,,,,93.0,111.0,76.0
-Follow Me,2020,2020-09-18,no_escape_2020,20200913044315,,,,38.0,13.0,44.0
-Extra Ordinary,2020,2020-03-06,extra_ordinary,20200310155225,100.0,59,,98.0,93.0,77.0
-Palm Springs,2020,2020-07-10,palm_springs_2020,20200709001203,98.0,55,,95.0,253.0,89.0
-A Call to Spy,2020,2020-10-02,a_call_to_spy,,,,,70.0,50.0,75.0
-Love Story,2020,2020-02-09,love_story,,,,,65.0,31.0,75.0
-Spider-Man: No Way Home,2021,2021-12-17,spider_man_no_way_home,,,,,93.0,430.0,97.0
-Shang-Chi and the Legend of the Ten Rings,2021,2021-09-03,shang_chi_and_the_legend_of_the_ten_rings,20210902004116,91.0,150,,92.0,345.0,98.0
-Venom: Let There Be Carnage,2021,2021-10-01,venom_let_there_be_carnage,20210930135202,70.0,30,,58.0,282.0,83.0
-Black Widow,2021,2021-07-09,black_widow_2021,20210708021141,82.0,210,,79.0,463.0,91.0
-F9: The Fast Saga,2021,2021-06-25,,,,,,,,
-Eternals,2021,2021-11-05,eternals,20211104105307,54.0,188,,48.0,416.0,77.0
-No Time to Die,2021,2021-10-08,no_time_to_die_2021,20211007005709,84.0,204,,83.0,429.0,88.0
-A Quiet Place Part II,2021,2021-05-28,a_quiet_place_part_ii,20210521014100,92.0,59,,91.0,366.0,92.0
-Ghostbusters: Afterlife,2021,2021-11-19,ghostbusters_afterlife,20211118012017,67.0,93,,63.0,308.0,94.0
-Free Guy,2021,2021-08-13,free_guy,20210812043715,85.0,108,,80.0,296.0,94.0
-Jungle Cruise,2021,2021-07-30,jungle_cruise,20210729085628,66.0,119,,62.0,348.0,92.0
-Godzilla vs. Kong,2021,2021-03-31,godzilla_vs_kong,20210330041020,81.0,114,,75.0,391.0,91.0
-Dune: Part One,2021,2021-10-22,,,,,,,,
-Halloween Kills,2021,2021-10-15,halloween_kills,20211014054305,54.0,50,,38.0,276.0,66.0
-Encanto,2021,2021-11-24,encanto_2021,20211123035627,94.0,51,,92.0,209.0,93.0
-Cruella,2021,2021-05-28,cruella,20210527005429,71.0,128,,75.0,415.0,97.0
-Sing 2,2021,2021-12-22,sing_2,20211221232746,65.0,49,,72.0,134.0,98.0
-Space Jam: A New Legacy,2021,2021-07-16,space_jam_a_new_legacy,,,,,25.0,228.0,79.0
-The Conjuring: The Devil Made Me Do It,2021,2021-06-04,the_conjuring_the_devil_made_me_do_it,20210605144556,61.0,151,,56.0,253.0,83.0
-Candyman,2021,2021-08-27,candyman,20210830015315,76.0,72,,79.0,82.0,64.0
-The Boss Baby 2: Family Business,2021,2021-07-02,,,,,,,,
-The Addams Family 2,2021,2021-10-01,the_addams_family_2,20211001053257,,,,28.0,111.0,69.0
-The Suicide Squad,2021,2021-08-06,the_suicide_squad,20210805155420,95.0,153,,90.0,384.0,82.0
-Raya and the Last Dragon,2021,2021-03-05,raya_and_the_last_dragon,20210304052544,97.0,119,,93.0,303.0,97.0
-Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train,2021,2021-04-23,demon_slayer_kimetsu_no_yaiba_the_movie_mugen_train,20210416100149,,,,98.0,49.0,99.0
-Clifford the Big Red Dog,2021,2021-11-10,clifford_the_big_red_dog,20211109211102,55.0,22,,58.0,96.0,94.0
-House of Gucci,2021,2021-11-24,house_of_gucci,20211123013427,66.0,56,,62.0,373.0,83.0
-Old,2021,2021-07-23,old,20210722054308,57.0,7,,50.0,342.0,53.0
-Tom & Jerry,2021,2021-02-26,tom_and_jerry,20210226221651,25.0,32,,29.0,130.0,82.0
-The Forever Purge,2021,2021-07-02,the_forever_purge,20210701162141,59.0,39,,48.0,160.0,78.0
-Peter Rabbit 2: The Runaway,2021,2021-06-11,peter_rabbit_2_the_runaway,20210610205259,71.0,42,,68.0,75.0,89.0
-PAW Patrol: The Movie,2021,2021-08-20,paw_patrol_the_movie,20210819223716,91.0,22,,82.0,50.0,97.0
-Hitman's Wife's Bodyguard,2021,2021-06-16,,,,,,,,
-Mortal Kombat,2021,2021-04-23,mortal_kombat,20210426193723,44.0,43,,44.0,77.0,58.0
-Don't Breathe 2,2021,2021-08-13,dont_breathe_2,,,,,43.0,81.0,85.0
-In the Heights,2021,2021-06-11,in_the_heights_2021,,,,,94.0,373.0,94.0
-Snake Eyes,2021,2021-07-23,snake_eyes,,,,,42.0,71.0,36.0
-West Side Story,2021,2021-12-10,west_side_story,20211210011609,93.0,110,,92.0,115.0,84.0
-The Matrix Resurrections,2021,2021-12-22,the_matrix_resurrections,20211221195058,71.0,102,,63.0,363.0,63.0
-Wrath of Man,2021,2021-05-07,wrath_of_man,20210506012048,,,,68.0,260.0,90.0
-Nobody,2021,2021-03-26,nobody_2021,20210325042043,86.0,79,,83.0,287.0,94.0
-Escape Room: Tournament of Champions,2021,2021-07-16,escape_room_tournament_of_champions,20210715213704,48.0,29,,52.0,79.0,75.0
-Respect,2021,2021-08-13,respect_2021,20210812024935,69.0,42,,68.0,192.0,95.0
-Spiral,2021,2021-05-14,spiral_from_the_book_of_saw,20210513092525,54.0,50,,39.0,233.0,75.0
-Ron's Gone Wrong,2021,2021-10-22,rons_gone_wrong,20211023103446,80.0,65,,82.0,102.0,94.0
-Spirit Untamed,2021,2021-06-04,spirit_untamed,20210603142221,48.0,33,,48.0,115.0,95.0
-The Green Knight,2021,2021-07-30,the_green_knight,20210725193542,,,,89.0,331.0,50.0
-Resident Evil: Welcome to Raccoon City,2021,2021-11-24,resident_evil_welcome_to_raccoon_city,20211123195319,44.0,9,,30.0,92.0,65.0
-The King's Man,2021,2021-12-22,the_kings_man,20211222031538,45.0,83,,41.0,183.0,80.0
-The French Dispatch,2021,2021-10-22,the_french_dispatch,20211026095853,73.0,160,,75.0,321.0,76.0
-The Marksman,2021,2021-01-15,the_marksman_2021,20210111193638,,,,38.0,109.0,83.0
-The Unholy,2021,2021-04-02,the_unholy,,,,,25.0,8.0,44.0
-The Little Things,2021,2021-01-29,the_little_things_2021,20210129064010,46.0,110,,45.0,267.0,67.0
-Dear Evan Hansen,2021,2021-09-24,dear_evan_hansen,20210923172303,36.0,83,,28.0,281.0,88.0
-King Richard,2021,2021-11-19,king_richard,20211118152138,91.0,82,,90.0,302.0,98.0
-Stillwater,2021,2021-07-30,,,,,,,,
-Christmas with the Chosen: The Messengers,2021,2021-12-01,christmas_with_the_chosen_the_messengers,,,,,96.0,1313.0,96.0
-Malignant,2021,2021-09-10,malignant,,,,,40.0,2.0,40.0
-Chaos Walking,2021,2021-03-05,chaos_walking,20210307193608,23.0,82,,21.0,155.0,71.0
+title,year,release_date,rt_slug,wayback_timestamp,wayback_date,rt_score_monday,rt_reviews_monday,rt_audience_monday,rt_score_final,rt_reviews_final,rt_audience_final
+Star Wars: Episode IX - The Rise of Skywalker,2020,2019-12-20,,,,,,,,,
+1917,2020,Dec 25,1917_2019,,,,,,88.0,474.0,88.0
+Sonic the Hedgehog,2020,2020-02-14,sonic_the_hedgehog,,,,,,78.0,349.0,78.0
+Little Women,2020,2019-12-25,,,,,,,,,
+The Invisible Man,2020,2020-02-28,the_invisible_man_2020,,,,,,91.0,422.0,88.0
+The Call of the Wild,2020,2020-02-21,the_call_of_the_wild_2020,,,,,,63.0,212.0,89.0
+Bad Boys for Life,2020,2020-01-17,bad_boys_for_life,,,,,,76.0,269.0,96.0
+Onward,2020,2020-03-06,onward,,,,,,88.0,346.0,95.0
+Tenet,2020,2020-09-03,tenet,,,,,,70.0,379.0,76.0
+Knives Out,2020,2019-11-27,knives_out,,,,,,97.0,471.0,92.0
+Spies in Disguise,2020,2019-12-25,spies_in_disguise,,,,,,76.0,123.0,92.0
+The Gentlemen,2020,2020-01-24,the_gentlemen,,,,,,75.0,277.0,84.0
+Just Mercy,2020,Dec 25,just_mercy,,,,,,85.0,310.0,99.0
+The Croods: A New Age,2020,2020-11-25,the_croods_a_new_age,,,,,,77.0,156.0,94.0
+Parasite,2020,Oct 11,,,,,,,,,
+Jumanji: The Next Level,2020,2019-12-13,jumanji_the_next_level,20191216114213,2019-12-16 11:42 UTC,,,,72.0,248.0,87.0
+Fantasy Island,2020,2020-02-14,fantasy_island,,,,,,86.0,2.0,86.0
+Uncut Gems,2020,Dec 13,uncut_gems,,,,,,91.0,350.0,52.0
+Dolittle,2020,2020-01-17,dolittle,,,,,,15.0,240.0,76.0
+Wonder Woman 1984,2020,2020-12-25,wonder_woman_1984,,,,,,57.0,455.0,73.0
+The New Mutants,2020,2020-08-28,the_new_mutants,,,,,,36.0,136.0,55.0
+Like a Boss,2020,2020-01-10,like_a_boss,,,,,,22.0,159.0,65.0
+Unhinged,2020,Aug 14,unhinged,,,,,,27.0,49.0,27.0
+The Grudge,2020,2020-01-03,the_grudge,,,,,,41.0,163.0,46.0
+The Photograph,2020,2020-02-14,the-photograph,,,,,,62.0,10.0,62.0
+The War with Grandpa,2020,2020-10-09,the_war_with_grandpa,,,,,,29.0,121.0,85.0
+Underwater,2020,2020-01-10,underwater,,,,,,13.0,6.0,13.0
+Birds of Prey and the Fantabulous Emancipation of One Harley Quinn,2020,2020-02-07,birds_of_prey_2020,,,,,,79.0,449.0,78.0
+Gretel & Hansel,2020,2020-01-31,gretel_and_hansel,,,,,,63.0,115.0,23.0
+The Turning,2020,2020-01-24,the_turning,,,,,,86.0,28.0,54.0
+Bombshell,2020,Dec 13,bombshell,,,,,,0.0,0.0,0.0
+Frozen II,2020,2019-11-22,frozen_ii,20191125165626,2019-11-25 16:56 UTC (fallback),,,,77.0,341.0,92.0
+My Hero Academia: Heroes Rising,2020,2020-02-26,my_hero_academia_heroes_rising,,,,,,92.0,39.0,98.0
+The Way Back,2020,-,the_way_back,,,,,,73.0,137.0,72.0
+Jojo Rabbit,2020,Oct 18,jojo_rabbit,,,,,,81.0,432.0,94.0
+Brahms: The Boy II,2020,2020-02-21,brahms_the_boy_ii,,,,,,11.0,56.0,44.0
+Impractical Jokers: The Movie,2020,Feb 21,impractical_jokers_the_movie,,,,,,36.0,25.0,76.0
+Ford v Ferrari,2020,2019-11-15,ford_v_ferrari,,,,,,92.0,363.0,98.0
+Bloodshot,2020,2020-03-13,bloodshot,,,,,,29.0,3.0,29.0
+I Still Believe,2020,2020-03-13,i_still_believe,,,,,,50.0,48.0,98.0
+Emma.,2020,Feb 21,emma_2020,,,,,,86.0,260.0,72.0
+Come Play,2020,2020-10-30,come_play,,,,,,57.0,120.0,67.0
+Let Him Go,2020,2020-11-06,let_him_go,,,,,,85.0,197.0,76.0
+The Hunt,2020,2020-03-13,,,,,,,,,
+Downhill,2020,2020-02-14,downhill,,,,,,89.0,9.0,62.0
+Freaky,2020,2020-11-13,freaky,,,,,,84.0,253.0,80.0
+Cats,2020,2019-12-20,cats_2020,,,,,,27.0,43.0,27.0
+The Rhythm Section,2020,2020-01-31,the_rhythm_section,,,,,,28.0,188.0,44.0
+Monster Hunter,2020,2020-12-18,monster_hunter,,,,,,45.0,98.0,70.0
+A Beautiful Day in the Neighborhood,2020,2019-11-22,a_beautiful_day_in_the_neighborhood,,,,,,95.0,380.0,92.0
+Hocus Pocus,2020,2020-10-02,hocus_pocus,,,,,,42.0,65.0,72.0
+The SpongeBob Movie: Sponge on the Run,2020,2020-08-14,the_spongebob_movie_sponge_on_the_run,,,,,,66.0,74.0,48.0
+Richard Jewell,2020,2019-12-13,richard_jewell,,,,,,77.0,299.0,96.0
+Weathering with You,2020,2020-01-15,weathering_with_you,,,,,,92.0,98.0,95.0
+The Broken Hearts Gallery,2020,2020-09-11,the_broken_hearts_gallery,,,,,,80.0,117.0,88.0
+2020 Oscar Nominated Short Films,2020,2020-01-31,,,,,,,,,
+Portrait of a Lady on Fire,2020,2019-12-06,portrait_of_a_lady_on_fire,,,,,,98.0,337.0,92.0
+News of the World,2020,2020-12-25,news_of_the_world,,,,,,88.0,270.0,89.0
+Bill & Ted Face the Music,2020,2020-08-28,bill_and_ted_face_the_music,,,,,,83.0,267.0,64.0
+Queen & Slim,2020,2019-11-27,queen_and_slim,,,,,,82.0,233.0,92.0
+My Boyfriend's Meds,2020,2020-02-21,my_boyfriends_meds,,,,,,83.0,95.0,83.0
+The Empty Man,2020,2020-10-23,the_empty_man,,,,,,73.0,30.0,39.0
+Star Wars: Episode V - The Empire Strikes Back,2020,2020-07-10,star_wars_episode_v_the_empire_strikes_back,,,,,,93.0,174.0,97.0
+The Last Full Measure,2020,2020-01-24,the_last_full_measure,,,,,,62.0,78.0,96.0
+Words on Bathroom Walls,2020,2020-08-21,words_on_bathroom_walls,,,,,,89.0,92.0,94.0
+Fatale,2020,2020-12-18,fatale,,,,,,46.0,70.0,87.0
+The Nightmare Before Christmas,2020,2020-10-16,the_nightmare_before_christmas,,,,,,95.0,107.0,91.0
+Elf,2020,2020-11-13,elf,,,,,,85.0,204.0,79.0
+Ip Man 4: The Finale,2020,2019-12-25,ip_man_4_the_finale,,,,,,85.0,34.0,95.0
+Half Brothers,2020,2020-12-04,half_brothers_2020,,,,,,36.0,44.0,80.0
+The Wretched,2020,2020-05-01,haraamkhor,,,,,,67.0,9.0,38.0
+The Lodge,2020,2020-02-07,the_lodge,,,,,,75.0,184.0,51.0
+The Personal History of David Copperfield,2020,2020-08-28,the_personal_history_of_david_copperfield,,,,,,92.0,249.0,55.0
+Joker,2020,2019-10-04,joker,,,,,,33.0,4.0,33.0
+The Rental,2020,2020-07-24,4_dead_girls_the_soul_taker_2013,,,,,,20.0,1.0,20.0
+Once Upon a Time... in Hollywood,2020,2019-07-26,once_upon_a_time_in_hollywood,,,,,,86.0,580.0,70.0
+Jurassic Park,2020,2020-06-19,jurassic_park,,,,,,91.0,203.0,91.0
+2 Hearts,2020,2020-10-16,2_hearts,,,,,,17.0,29.0,87.0
+Promising Young Woman,2020,2020-12-25,promising_young_woman,,,,,,90.0,427.0,87.0
+True to the Game 2,2020,2020-11-06,true_to_the_game_2,,,,,,79.0,44.0,79.0
+Peninsula,2020,2020-08-07,train_to_busan_presents_peninsula,,,,,,54.0,131.0,76.0
+Love and Monsters,2020,2020-10-16,love_and_monsters,,,,,,94.0,116.0,89.0
+Infidel,2020,2020-09-18,infidel_2020,,,,,,58.0,12.0,86.0
+The Assistant,2020,2020-01-31,the_assistant_2020,,,,,,93.0,245.0,25.0
+Relic,2020,2020-07-03,relic,,,,,,91.0,235.0,51.0
+The Tax Collector,2020,2020-08-07,the_tax_collector,,,,,,17.0,69.0,73.0
+The Last Shift,2020,2020-09-25,the_last_shift,,,,,,66.0,35.0,37.0
+The Song of Names,2020,2019-12-25,the_song_of_names,,,,,,39.0,56.0,90.0
+Becky,2020,2020-06-05,becky_2020,,,,,,72.0,121.0,52.0
+All My Life,2020,2020-12-04,all_my_life_2020,,,,,,59.0,46.0,63.0
+A Hidden Life,2020,2019-12-13,,,,,,,,,
+Mafia Inc,2020,2020-02-14,mafia_inc,,,,,,93.0,15.0,82.0
+Jay and Silent Bob Reboot,2020,2019-10-15,jay_and_silent_bob_reboot,,,,,,67.0,39.0,93.0
+Cut Throat City,2020,2020-08-21,cut_throat_city,,,,,,72.0,43.0,38.0
+The Goonies,2020,2020-07-10,goonies,,,,,,77.0,65.0,90.0
+Sarileru Neekevvaru,2020,2020-01-10,sarileru_neekevvaru,,,,,,64.0,72.0,64.0
+National Lampoon's Christmas Vacation,2020,2020-11-25,national_lampoons_christmas_vacation,,,,,,72.0,58.0,86.0
+Vanguard,2020,2020-11-20,vanguard,,,,,,29.0,69.0,51.0
+Jaws,2020,2020-06-19,jaws,,,,,,97.0,178.0,98.0
+21 Bridges,2020,2019-11-22,21_bridges,,,,,,55.0,138.0,91.0
