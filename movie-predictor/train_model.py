@@ -9,9 +9,9 @@ Output: models/opening_weekend_model.json   (XGBoost model)
 Target: log1p(opening_weekend) → expm1 to get dollars back
 
 Features used:
-  - rt_score_monday      (tomatometer at release)
-  - rt_reviews_monday    (review count proxy = press coverage)
-  - rt_audience_monday   (audience score at release)
+  - rt_score_prerelease      (tomatometer at release)
+  - rt_reviews_prerelease    (review count proxy = press coverage)
+  - rt_audience_prerelease   (audience score at release)
   - log_budget / budget_known
   - mpaa_ordinal
   - is_sequel
@@ -45,9 +45,9 @@ os.makedirs("data/plots", exist_ok=True)
 # ── Feature list ──────────────────────────────────────────────────────────
 
 BASE_FEATURES = [
-    "rt_score_monday",
-    "rt_reviews_monday",
-    "rt_audience_monday",
+    "rt_score_prerelease",
+    "rt_reviews_prerelease",
+    "rt_audience_prerelease",
     "log_budget",
     "budget_known",
     "mpaa_ordinal",
@@ -85,11 +85,11 @@ def fill_missing_features(df: pd.DataFrame, feature_cols: list[str]) -> pd.DataF
     for col in feature_cols:
         if col not in df.columns:
             df[col] = 0
-        if col in ["rt_score_monday", "rt_score_final", "rt_audience_monday"]:
+        if col in ["rt_score_prerelease", "rt_score_final", "rt_audience_prerelease"]:
             # Fill with median — missing RT score is informative (limited release / no buzz)
             median_val = df[col].median()
             df[col] = df[col].fillna(median_val)
-        elif col == "rt_reviews_monday":
+        elif col == "rt_reviews_prerelease":
             df[col] = df[col].fillna(0)
         else:
             df[col] = df[col].fillna(0)
@@ -119,7 +119,7 @@ def main():
 
     # Must have target and at least one RT signal
     df = df[df[TARGET].notna() & df["opening_weekend"].notna()]
-    has_rt = df["rt_score_monday"].notna() | df["rt_score_final"].notna()
+    has_rt = df["rt_score_prerelease"].notna() | df["rt_score_final"].notna()
     df_with_rt = df[has_rt].copy()
     df_no_rt = df[~has_rt].copy()
     print(f"  {len(df_with_rt)} rows with RT scores")
@@ -128,10 +128,10 @@ def main():
     df_model = df_with_rt.copy()
 
     # Use release-day score; fall back to final score if release-day missing
-    df_model["rt_score_monday"] = df_model["rt_score_monday"].fillna(
+    df_model["rt_score_prerelease"] = df_model["rt_score_prerelease"].fillna(
         df_model["rt_score_final"]
     )
-    df_model["rt_audience_monday"] = df_model["rt_audience_monday"].fillna(
+    df_model["rt_audience_prerelease"] = df_model["rt_audience_prerelease"].fillna(
         df_model["rt_audience_final"]
     )
 
@@ -223,11 +223,11 @@ def main():
 
     print("\nWorst predictions (OOF):")
     worst = df_model.nlargest(10, "abs_error_M")[
-        ["title", "year", "actual", "oof_pred", "error_pct", "rt_score_monday"]
+        ["title", "year", "actual", "oof_pred", "error_pct", "rt_score_prerelease"]
     ].copy()
     worst["actual_M"] = worst["actual"] / 1e6
     worst["pred_M"] = worst["oof_pred"] / 1e6
-    print(worst[["title", "year", "actual_M", "pred_M", "error_pct", "rt_score_monday"]].to_string())
+    print(worst[["title", "year", "actual_M", "pred_M", "error_pct", "rt_score_prerelease"]].to_string())
 
     # ── Plots ─────────────────────────────────────────────────────────────
     fig, axes = plt.subplots(1, 3, figsize=(16, 5))

@@ -10,8 +10,8 @@ Output: data/rt_scores.csv
 
 Columns:
   title, year, release_date, rt_slug,
-  wayback_timestamp, wayback_date,
-  rt_score_monday, rt_reviews_monday, rt_audience_monday,
+  wayback_timestamp, wayback_date_prerelease,
+  rt_score_prerelease, rt_reviews_prerelease, rt_audience_prerelease,
   rt_score_final, rt_reviews_final, rt_audience_final
 """
 
@@ -161,7 +161,7 @@ def find_wayback_snapshot(rt_slug: str, release_date: str) -> tuple[str | None, 
     from_ts = thursday.strftime("%Y%m%d") + "200000"
     to_ts   = thursday.strftime("%Y%m%d") + "235959"
 
-    # Primary: Monday 14:00-20:00 UTC window
+    # Primary: Thursday evening 20:00-23:59 UTC
     data = cdx_get({
         "url": rt_url, "output": "json", "limit": 3,
         "from": from_ts, "to": to_ts,
@@ -169,11 +169,11 @@ def find_wayback_snapshot(rt_slug: str, release_date: str) -> tuple[str | None, 
     })
     if data and len(data) > 1:
         ts = data[1][0]
-        return ts, f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC"
+        return ts, f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC (Thu eve)"
 
-    # Fallback 1: full Monday 08:00-23:59 UTC
-    from_ts2 = monday.strftime("%Y%m%d") + "080000"
-    to_ts2   = monday.strftime("%Y%m%d") + "235959"
+    # Fallback 1: all of Thursday
+    from_ts2 = thursday.strftime("%Y%m%d") + "000000"
+    to_ts2   = thursday.strftime("%Y%m%d") + "235959"
     data = cdx_get({
         "url": rt_url, "output": "json", "limit": 5,
         "from": from_ts2, "to": to_ts2,
@@ -181,28 +181,35 @@ def find_wayback_snapshot(rt_slug: str, release_date: str) -> tuple[str | None, 
         "collapse": "timestamp:2",
     })
     if data and len(data) > 1:
-        best, best_diff = None, float("inf")
-        for row in data[1:]:
-            ts = row[0]
-            hour = int(ts[8:10]) + int(ts[10:12]) / 60
-            diff = abs(hour - 15.0)
-            if diff < best_diff:
-                best_diff, best = diff, ts
-        if best:
-            return best, f"{best[:4]}-{best[4:6]}-{best[6:8]} {best[8:10]}:{best[10:12]} UTC"
+        # Pick latest Thursday snapshot (most reviews counted)
+        ts = data[-1][0]
+        return ts, f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC (Thu)"
 
-    # Fallback 2: Sun–Tue window
-    from_ts3 = (monday - timedelta(days=1)).strftime("%Y%m%d")
-    to_ts3   = (monday + timedelta(days=2)).strftime("%Y%m%d")
+    # Fallback 2: all of Wednesday
+    from_ts3 = wednesday.strftime("%Y%m%d") + "000000"
+    to_ts3   = wednesday.strftime("%Y%m%d") + "235959"
     data = cdx_get({
         "url": rt_url, "output": "json", "limit": 5,
         "from": from_ts3, "to": to_ts3,
         "fl": "timestamp,statuscode", "filter": "statuscode:200",
+        "collapse": "timestamp:2",
+    })
+    if data and len(data) > 1:
+        ts = data[-1][0]
+        return ts, f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC (Wed)"
+
+    # Fallback 3: Mon-Fri release week window (any pre-release snapshot)
+    from_ts4 = (wednesday - timedelta(days=2)).strftime("%Y%m%d")
+    to_ts4   = thursday.strftime("%Y%m%d") + "235959"
+    data = cdx_get({
+        "url": rt_url, "output": "json", "limit": 5,
+        "from": from_ts4, "to": to_ts4,
+        "fl": "timestamp,statuscode", "filter": "statuscode:200",
         "collapse": "timestamp:8",
     })
     if data and len(data) > 1:
-        ts = data[1][0]
-        return ts, f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC (fallback)"
+        ts = data[-1][0]
+        return ts, f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC (pre-release fallback)"
 
     return None, None
 
@@ -299,10 +306,10 @@ def process_movie(movie: dict, idx: int, total: int) -> dict:
         "release_date": release_date,
         "rt_slug": None,
         "wayback_timestamp": None,
-        "wayback_date": None,
-        "rt_score_monday": None,
-        "rt_reviews_monday": None,
-        "rt_audience_monday": None,
+        "wayback_date_prerelease": None,
+        "rt_score_prerelease": None,
+        "rt_reviews_prerelease": None,
+        "rt_audience_prerelease": None,
         "rt_score_final": None,
         "rt_reviews_final": None,
         "rt_audience_final": None,
@@ -317,19 +324,19 @@ def process_movie(movie: dict, idx: int, total: int) -> dict:
     time.sleep(0.5)
 
     # Step 2: Monday 10am ET Wayback snapshot
-    wayback_ts, wayback_date = find_wayback_snapshot(rt_slug, release_date)
+    wayback_ts, wayback_date_prerelease = find_wayback_snapshot(rt_slug, release_date)
     if wayback_ts:
         row["wayback_timestamp"] = wayback_ts
-        row["wayback_date"] = wayback_date
-        log(f"  Wayback: {wayback_date}")
+        row["wayback_date_prerelease"] = wayback_date_prerelease
+        log(f"  Wayback: {wayback_date_prerelease}")
         time.sleep(0.5)
 
         # Step 3: Scrape archived page
         monday_scores = scrape_wayback_rt(rt_slug, wayback_ts)
-        row["rt_score_monday"] = monday_scores.get("rt_score")
-        row["rt_reviews_monday"] = monday_scores.get("rt_reviews")
-        row["rt_audience_monday"] = monday_scores.get("rt_audience")
-        log(f"  Monday score: {row['rt_score_monday']}% ({row['rt_reviews_monday']} reviews) aud={row['rt_audience_monday']}%")
+        row["rt_score_prerelease"] = monday_scores.get("rt_score")
+        row["rt_reviews_prerelease"] = monday_scores.get("rt_reviews")
+        row["rt_audience_prerelease"] = monday_scores.get("rt_audience")
+        log(f"  Monday score: {row['rt_score_prerelease']}% ({row['rt_reviews_prerelease']} reviews) aud={row['rt_audience_prerelease']}%")
         time.sleep(0.5)
     else:
         log(f"  ✗ No Wayback snapshot: {title}")
@@ -405,11 +412,11 @@ def main():
     df.to_csv(output_path, index=False)
     print(f"\n✓ Done. {len(df)} rows saved to {output_path}")
 
-    has_monday = df["rt_score_monday"].notna().sum()
+    has_monday = df["rt_score_prerelease"].notna().sum()
     has_final = df["rt_score_final"].notna().sum()
     print(f"  Monday scores:  {has_monday}/{len(df)}")
     print(f"  Final scores:   {has_final}/{len(df)}")
-    print(df[["title", "rt_score_monday", "rt_reviews_monday", "rt_audience_monday", "rt_score_final"]].head(10).to_string())
+    print(df[["title", "rt_score_prerelease", "rt_reviews_prerelease", "rt_audience_prerelease", "rt_score_final"]].head(10).to_string())
 
 
 if __name__ == "__main__":
