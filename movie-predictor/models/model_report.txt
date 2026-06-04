@@ -1,0 +1,39 @@
+============================================================
+OPENING WEEKEND PREDICTION MODEL — REPORT
+============================================================
+Training rows:     1247
+Features:          47
+
+── Cross-validation (5-fold) ──
+CV MAE (log):       1.0913 ± 0.0987
+CV MAE (dollars):  $8.2M ± $1.7M
+CV R²:              0.5628 ± 0.0644
+
+── Top 20 Features ──
+  dist_Other                              : 0.1814
+  genre_Adventure                         : 0.0726
+  is_sequel                               : 0.0632
+  dist_A24                                : 0.0456
+  genre_Horror                            : 0.0445
+  dist_WB                                 : 0.0400
+  log_budget                              : 0.0319
+  dist_Sony                               : 0.0313
+  genre_Action                            : 0.0278
+  genre_Drama                             : 0.0250
+  mpaa_ordinal                            : 0.0234
+  release_year                            : 0.0232
+  is_holiday_weekend                      : 0.0201
+  dist_Disney                             : 0.0198
+  budget_known                            : 0.0191
+  genre_Family                            : 0.0187
+  genre_Animation                         : 0.0176
+  genre_Thriller                          : 0.0165
+  genre_Musical                           : 0.0160
+  rt_score_monday                         : 0.0159
+
+── CV Fold Results ──
+  Fold 1: MAE=1.125 ($6.9M), R²=0.532
+  Fold 2: MAE=1.069 ($11.0M), R²=0.588
+  Fold 3: MAE=1.212 ($9.4M), R²=0.557
+  Fold 4: MAE=0.916 ($6.8M), R²=0.666
+  Fold 5: MAE=1.134 ($6.8M), R²=0.471
