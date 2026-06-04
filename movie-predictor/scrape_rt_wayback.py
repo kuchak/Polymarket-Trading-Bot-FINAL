@@ -59,32 +59,51 @@ def title_to_rt_slug(title: str) -> str:
 def find_rt_slug(title: str, year: int) -> str | None:
     """
     Search RT to find the correct slug for a movie.
-    Uses RT's search endpoint.
+    Tries plain slug first, then year-suffixed slug.
+    Verifies year from JSON-LD when possible.
     """
-    # First try the obvious slug
     candidate = title_to_rt_slug(title)
-    url = f"{RT_BASE}/{candidate}"
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=20, allow_redirects=True)
-        if resp.status_code == 200 and "/m/" in resp.url:
-            # Verify it's the right year via JSON-LD
-            soup = BeautifulSoup(resp.text, "html.parser")
-            page_year = extract_year_from_page(soup)
-            if page_year is None or abs(page_year - year) <= 1:
-                # Extract the actual slug from the final URL
-                return resp.url.split("/m/")[-1].split("?")[0].rstrip("/")
-    except Exception:
-        pass
+    candidates = [candidate, f"{candidate}_{year}"]
 
-    # If not found, try with year suffix
-    candidate_year = f"{candidate}_{year}"
-    url = f"{RT_BASE}/{candidate_year}"
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=20, allow_redirects=True)
-        if resp.status_code == 200 and "/m/" in resp.url:
-            return resp.url.split("/m/")[-1].split("?")[0].rstrip("/")
-    except Exception:
-        pass
+    for slug in candidates:
+        url = f"{RT_BASE}/{slug}"
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=20, allow_redirects=True)
+            if resp.status_code != 200 or "/m/" not in resp.url:
+                continue
+            soup = BeautifulSoup(resp.text, "html.parser")
+
+            # Check if this page has an aggregate rating (confirms it's a real scored film)
+            has_rating = any(
+                "aggregateRating" in (s.string or "")
+                for s in soup.find_all("script", type="application/ld+json")
+            )
+
+            # Try to verify year from JSON-LD datePublished of the MAIN movie entry
+            page_year = None
+            for script in soup.find_all("script", type="application/ld+json"):
+                try:
+                    d = json.loads(script.string or "")
+                    # Only use datePublished from the primary Movie entry (has aggregateRating)
+                    if d.get("@type") == "Movie" and d.get("aggregateRating"):
+                        date = d.get("datePublished") or ""
+                        if date:
+                            page_year = int(date[:4])
+                        break
+                except Exception:
+                    pass
+
+            if page_year is not None and abs(page_year - year) <= 1:
+                return resp.url.split("/m/")[-1].split("?")[0].rstrip("/")
+            elif page_year is None and has_rating:
+                # No date in JSON-LD but rating exists — accept (e.g. Tenet, Wicked)
+                return resp.url.split("/m/")[-1].split("?")[0].rstrip("/")
+            elif slug == f"{candidate}_{year}" and resp.status_code == 200:
+                # Year-suffixed slug found a page — accept regardless
+                return resp.url.split("/m/")[-1].split("?")[0].rstrip("/")
+            # Year mismatch on plain slug (e.g. wicked → 1939 film) — try year-suffix next
+        except Exception:
+            pass
 
     return None
 
@@ -177,10 +196,10 @@ def extract_scores_from_soup(soup: BeautifulSoup) -> dict:
         "rt_audience_count": None,
     }
 
-    # Primary: JSON-LD (most reliable in archived pages)
+    # ── Critic score: JSON-LD (most reliable in both live and archived pages) ──
     for script in soup.find_all("script", type="application/ld+json"):
         try:
-            d = json.loads(script.string)
+            d = json.loads(script.string or "")
             agg = d.get("aggregateRating", {})
             if agg.get("ratingValue") is not None:
                 result["rt_score"] = int(agg["ratingValue"])
@@ -189,15 +208,30 @@ def extract_scores_from_soup(soup: BeautifulSoup) -> dict:
         except Exception:
             pass
 
-    # Audience score — from rt-text slot="audienceScore"
-    audience_tags = soup.find_all("rt-text", attrs={"slot": "audienceScore"})
-    for tag in reversed(audience_tags):  # last one is usually the main scoreboard
-        text = tag.get_text(strip=True).replace("%", "")
-        if text.isdigit():
-            result["rt_audience"] = int(text)
-            break
+    # ── Audience score: inline script JSON (live pages use this pattern) ──
+    # e.g. {"audienceScore":{"score":"94","reviewCount":2329,...}}
+    if result["rt_audience"] is None:
+        for script in soup.find_all("script"):
+            text = script.string or ""
+            if "audienceScore" in text and '"score"' in text:
+                m = re.search(r'"audienceScore"\s*:\s*\{[^}]*"score"\s*:\s*"(\d+)"', text)
+                if m:
+                    result["rt_audience"] = int(m.group(1))
+                m2 = re.search(r'"audienceScore"\s*:\s*\{[^}]*"reviewCount"\s*:\s*(\d+)', text)
+                if m2:
+                    result["rt_audience_count"] = int(m2.group(1))
+                break
 
-    # If JSON-LD didn't give us the score, try rt-text slot="criticsScore"
+    # ── Audience score fallback: rt-text slot="audienceScore" (archived pages) ──
+    if result["rt_audience"] is None:
+        audience_tags = soup.find_all("rt-text", attrs={"slot": "audienceScore"})
+        for tag in reversed(audience_tags):
+            text = tag.get_text(strip=True).replace("%", "")
+            if text.isdigit():
+                result["rt_audience"] = int(text)
+                break
+
+    # ── Critic score fallback: rt-text slot="criticsScore" ──
     if result["rt_score"] is None:
         critic_tags = soup.find_all("rt-text", attrs={"slot": "criticsScore"})
         for tag in reversed(critic_tags):
@@ -206,7 +240,7 @@ def extract_scores_from_soup(soup: BeautifulSoup) -> dict:
                 result["rt_score"] = int(text)
                 break
 
-    # Review count fallback — slot="criticsCount"
+    # ── Review count fallback: slot="criticsCount" ──
     if result["rt_reviews"] is None:
         for tag in soup.find_all(attrs={"slot": "criticsCount"}):
             text = re.sub(r"[^\d]", "", tag.get_text())
