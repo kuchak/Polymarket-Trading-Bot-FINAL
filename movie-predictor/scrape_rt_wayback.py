@@ -43,6 +43,23 @@ CHECKPOINT_EVERY = 50
 print_lock = threading.Lock()
 
 
+def cdx_get(params: dict, max_retries: int = 5) -> list | None:
+    """Wayback CDX request with exponential backoff on connection errors."""
+    for attempt in range(max_retries):
+        try:
+            resp = requests.get(WAYBACK_CDX, params=params, timeout=30)
+            data = resp.json()
+            return data
+        except Exception as e:
+            wait = 2 ** attempt  # 1, 2, 4, 8, 16 seconds
+            if attempt < max_retries - 1:
+                log(f"  CDX retry {attempt+1}/{max_retries} (wait {wait}s): {type(e).__name__}")
+                time.sleep(wait)
+            else:
+                log(f"  CDX failed after {max_retries} attempts: {e}")
+    return None
+
+
 def log(msg):
     with print_lock:
         print(msg, flush=True)
@@ -138,89 +155,48 @@ def find_wayback_snapshot(rt_slug: str, release_date: str) -> tuple[str | None, 
     from_ts = monday.strftime("%Y%m%d") + "140000"
     to_ts = monday.strftime("%Y%m%d") + "200000"
 
-    try:
-        resp = requests.get(
-            WAYBACK_CDX,
-            params={
-                "url": rt_url,
-                "output": "json",
-                "limit": 3,
-                "from": from_ts,
-                "to": to_ts,
-                "fl": "timestamp,statuscode",
-                "filter": "statuscode:200",
-            },
-            timeout=30,
-        )
-        data = resp.json()
-        if len(data) > 1:
-            ts = data[1][0]
-            readable = f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC"
-            return ts, readable
-    except Exception as e:
-        log(f"  CDX error [{rt_slug}] Monday window: {e}")
+    # Primary: Monday 14:00-20:00 UTC window
+    data = cdx_get({
+        "url": rt_url, "output": "json", "limit": 3,
+        "from": from_ts, "to": to_ts,
+        "fl": "timestamp,statuscode", "filter": "statuscode:200",
+    })
+    if data and len(data) > 1:
+        ts = data[1][0]
+        return ts, f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC"
 
-    # Fallback 1: any snapshot Monday ± 6 hours
+    # Fallback 1: full Monday 08:00-23:59 UTC
     from_ts2 = monday.strftime("%Y%m%d") + "080000"
-    to_ts2 = monday.strftime("%Y%m%d") + "235959"
-    try:
-        resp = requests.get(
-            WAYBACK_CDX,
-            params={
-                "url": rt_url,
-                "output": "json",
-                "limit": 5,
-                "from": from_ts2,
-                "to": to_ts2,
-                "fl": "timestamp,statuscode",
-                "filter": "statuscode:200",
-                "collapse": "timestamp:2",  # collapse to 2-hour buckets
-            },
-            timeout=30,
-        )
-        data = resp.json()
-        if len(data) > 1:
-            # Pick snapshot closest to 15:00 UTC
-            best = None
-            best_diff = float("inf")
-            for row in data[1:]:
-                ts = row[0]
-                hour = int(ts[8:10]) + int(ts[10:12]) / 60
-                diff = abs(hour - 15.0)
-                if diff < best_diff:
-                    best_diff = diff
-                    best = ts
-            if best:
-                readable = f"{best[:4]}-{best[4:6]}-{best[6:8]} {best[8:10]}:{best[10:12]} UTC"
-                return best, readable
-    except Exception as e:
-        log(f"  CDX fallback1 [{rt_slug}]: {e}")
+    to_ts2   = monday.strftime("%Y%m%d") + "235959"
+    data = cdx_get({
+        "url": rt_url, "output": "json", "limit": 5,
+        "from": from_ts2, "to": to_ts2,
+        "fl": "timestamp,statuscode", "filter": "statuscode:200",
+        "collapse": "timestamp:2",
+    })
+    if data and len(data) > 1:
+        best, best_diff = None, float("inf")
+        for row in data[1:]:
+            ts = row[0]
+            hour = int(ts[8:10]) + int(ts[10:12]) / 60
+            diff = abs(hour - 15.0)
+            if diff < best_diff:
+                best_diff, best = diff, ts
+        if best:
+            return best, f"{best[:4]}-{best[4:6]}-{best[6:8]} {best[8:10]}:{best[10:12]} UTC"
 
-    # Fallback 2: Sunday evening or Tuesday — widen to Sun-Tue window
+    # Fallback 2: Sun–Tue window
     from_ts3 = (monday - timedelta(days=1)).strftime("%Y%m%d")
-    to_ts3 = (monday + timedelta(days=2)).strftime("%Y%m%d")
-    try:
-        resp = requests.get(
-            WAYBACK_CDX,
-            params={
-                "url": rt_url,
-                "output": "json",
-                "limit": 5,
-                "from": from_ts3,
-                "to": to_ts3,
-                "fl": "timestamp,statuscode",
-                "filter": "statuscode:200",
-                "collapse": "timestamp:8",
-            },
-            timeout=30,
-        )
-        data = resp.json()
-        if len(data) > 1:
-            ts = data[1][0]
-            readable = f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC (fallback)"
-            return ts, readable
-    except Exception as e:
-        log(f"  CDX fallback2 [{rt_slug}]: {e}")
+    to_ts3   = (monday + timedelta(days=2)).strftime("%Y%m%d")
+    data = cdx_get({
+        "url": rt_url, "output": "json", "limit": 5,
+        "from": from_ts3, "to": to_ts3,
+        "fl": "timestamp,statuscode", "filter": "statuscode:200",
+        "collapse": "timestamp:8",
+    })
+    if data and len(data) > 1:
+        ts = data[1][0]
+        return ts, f"{ts[:4]}-{ts[4:6]}-{ts[6:8]} {ts[8:10]}:{ts[10:12]} UTC (fallback)"
 
     return None, None
 
