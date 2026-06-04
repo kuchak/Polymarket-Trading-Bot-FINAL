@@ -137,9 +137,9 @@ def build_feature_row(inputs: dict, feature_cols: list[str]) -> pd.DataFrame:
     row = {col: 0.0 for col in feature_cols}
 
     # RT scores
-    row["rt_score_release_day"] = inputs.get("rt_score", 0) or 0
-    row["rt_reviews_release_day"] = inputs.get("rt_reviews", 0) or 0
-    row["rt_audience_release_day"] = inputs.get("rt_audience", 0) or 0
+    row["rt_score_monday"] = inputs.get("rt_score", 0) or 0
+    row["rt_reviews_monday"] = inputs.get("rt_reviews", 0) or 0
+    row["rt_audience_monday"] = inputs.get("rt_audience", 0) or 0
 
     # Budget
     budget = inputs.get("budget")
@@ -356,13 +356,13 @@ def main():
         rt = inputs.get("rt_score")
         if rt:
             similar = df[
-                (df["rt_score_release_day"].between(rt - 8, rt + 8)) &
+                (df["rt_score_monday"].between(rt - 8, rt + 8)) &
                 (df["opening_weekend"].notna())
             ].nlargest(5, "opening_weekend")
             if not similar.empty:
                 print("\n  Similar RT-scored films (for context):")
                 for _, row in similar.iterrows():
-                    print(f"    {row['title']:35s} RT={row.get('rt_score_release_day', '?'):>3}%  "
+                    print(f"    {row['title']:35s} RT={row.get('rt_score_monday', '?'):>3}%  "
                           f"Opening={fmt_money(row['opening_weekend'])}")
 
     return result

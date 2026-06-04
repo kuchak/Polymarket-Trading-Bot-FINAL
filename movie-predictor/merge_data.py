@@ -146,8 +146,8 @@ def main():
     # Primary join: normalized title + year
     df = df_bom.merge(
         df_rt[["title_norm", "year", "rt_slug", "wayback_timestamp",
-               "rt_score_release_day", "rt_reviews_release_day",
-               "rt_audience_release_day", "rt_score_final",
+               "rt_score_monday", "rt_reviews_monday",
+               "rt_audience_monday", "rt_score_final",
                "rt_reviews_final", "rt_audience_final"]],
         on=["title_norm", "year"],
         how="left",
@@ -199,10 +199,10 @@ def main():
     df["log_budget"] = np.log1p(df["budget"].fillna(0))
 
     # RT score delta (how much score changed from release day to final)
-    df["rt_score_delta"] = df["rt_score_final"] - df["rt_score_release_day"]
+    df["rt_score_delta"] = df["rt_score_final"] - df["rt_score_monday"]
 
     # Review count at release (proxy for how wide press coverage was)
-    df["log_rt_reviews_release"] = np.log1p(df["rt_reviews_release_day"].fillna(0))
+    df["log_rt_reviews_release"] = np.log1p(df["rt_reviews_monday"].fillna(0))
 
     # Target: opening weekend gross — log-transformed for better model behavior
     df["log_opening_weekend"] = np.log1p(df["opening_weekend"])
@@ -223,8 +223,8 @@ def main():
     # Summary
     print("\nFeature completeness:")
     key_cols = [
-        "opening_weekend", "rt_score_release_day", "rt_score_final",
-        "rt_audience_release_day", "budget", "mpaa_rating", "genre",
+        "opening_weekend", "rt_score_monday", "rt_score_final",
+        "rt_audience_monday", "budget", "mpaa_rating", "genre",
         "distributor", "is_sequel",
     ]
     for col in key_cols:
@@ -234,7 +234,7 @@ def main():
 
     print("\nSample rows:")
     sample_cols = ["title", "year", "release_date", "opening_weekend",
-                   "rt_score_release_day", "rt_score_final", "budget",
+                   "rt_score_monday", "rt_score_final", "budget",
                    "mpaa_rating", "is_sequel", "distributor_group"]
     print(df[sample_cols].head(10).to_string())
 
