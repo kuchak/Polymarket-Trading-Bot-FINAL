@@ -120,15 +120,30 @@ def train_multiplier_model(df: pd.DataFrame, target_col: str, model_name: str):
 
 
 def main():
-    # Load daily box office data
-    df = pd.read_csv("data/daily_boxoffice.csv")
+    # Load opening weekends from date-based chart (better coverage)
+    import re
+    df = pd.read_csv("data/opening_weekends.csv")
     bom = pd.read_csv("data/bom_movies.csv")
 
-    # Merge to get genre, mpaa, release_date
+    def normalize(t):
+        t = str(t).lower().strip()
+        t = re.sub(r"[^a-z0-9 ]", " ", t)
+        return re.sub(r"\s+", " ", t).strip()
+
+    df["title_norm"] = df["title"].apply(normalize)
+    bom["title_norm"] = bom["title"].apply(normalize)
+
+    # Merge to get genre, mpaa, release_date from BOM
     df = df.merge(
-        bom[["title","year","genre","mpaa_rating","max_theaters","release_date"]],
-        on=["title","year"], how="left"
+        bom[["title_norm","genre","mpaa_rating","max_theaters","release_date"]],
+        on="title_norm", how="left"
     )
+    # Use opening_date as release_date if BOM release_date missing
+    df["release_date"] = df["release_date"].fillna(df["opening_date"])
+
+    # Rename opening_theaters from opening_weekends if present
+    if "opening_theaters" in df.columns and "max_theaters" in df.columns:
+        df["max_theaters"] = df["max_theaters"].fillna(df["opening_theaters"])
 
     print(f"Total rows: {len(df)}")
     print(f"With Fri data: {df['fri'].notna().sum()}")
@@ -147,7 +162,8 @@ def main():
 
     # ── Model 3: Thu preview → full weekend ──────────────────────────────────
     # Use case: Thursday night, you only know previews, rough early estimate
-    df["thu_to_full_mult"] = df["weekend_total_daily"] / df["thu_preview"].replace(0, np.nan)
+    total_col = "weekend_total" if "weekend_total" in df.columns else "weekend_total_daily"
+    df["thu_to_full_mult"] = df[total_col] / df["thu_preview"].replace(0, np.nan)
     m3, f3 = train_multiplier_model(
         df[df["thu_preview"].notna() & (df["thu_preview"] > 0)],
         "thu_to_full_mult", "thu_to_full"
