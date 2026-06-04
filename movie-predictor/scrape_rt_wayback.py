@@ -111,49 +111,55 @@ def find_rt_slug(title: str, year: int) -> str | None:
     return None
 
 
-# ── Monday 10am ET snapshot logic ─────────────────────────────────────────
+# ── Wednesday/Thursday embargo lift snapshot logic ─────────────────────────
+# For pre-release box office prediction, we want the RT score as it existed
+# just BEFORE opening weekend — specifically Wed/Thu when press embargoes lift.
+# This is the score a bettor would actually see when placing a pre-release bet.
 
-def get_monday_after_opening(release_date: str) -> datetime | None:
+def get_embargo_window(release_date: str) -> tuple[datetime | None, datetime | None]:
     """
-    Given a release date (Friday), return the Monday 10am ET (15:00 UTC)
-    after the opening weekend.
-    release_date: 'YYYY-MM-DD'
+    Given a release date (typically Friday), return the Wed-Thu window
+    immediately before opening weekend (embargo lift period).
+    Returns (wednesday, thursday) datetimes, or (None, None).
     """
     try:
         dt = datetime.strptime(release_date, "%Y-%m-%d")
     except ValueError:
-        return None
+        return None, None
 
-    # Find the following Monday
-    days_until_monday = (7 - dt.weekday()) % 7  # weekday(): Mon=0, Fri=4
-    if days_until_monday == 0:
-        days_until_monday = 7  # if release IS Monday, go to next Monday
-    monday = dt + timedelta(days=days_until_monday)
+    # Find the Friday of opening weekend (release day is usually Friday)
+    # weekday(): Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5, Sun=6
+    dow = dt.weekday()
+    if dow == 4:   # already Friday
+        friday = dt
+    elif dow == 3: # Thursday (some movies open Thu)
+        friday = dt + timedelta(days=1)
+    else:
+        # Find next Friday
+        days_to_fri = (4 - dow) % 7
+        friday = dt + timedelta(days=days_to_fri)
 
-    # Monday 10am ET = Monday 15:00 UTC (ET is UTC-5 standard, UTC-4 DST)
-    # Use UTC-4 (EDT) for April-November releases, UTC-5 (EST) for Nov-March
-    month = monday.month
-    utc_offset = 4 if 3 <= month <= 11 else 5
-    monday_utc = monday.replace(hour=15 - (4 - utc_offset))  # 15:00 UTC for EDT, 16:00 UTC for EST
-    # Simpler: just target Monday 14:00-17:00 UTC window and take first snapshot
-    return monday
+    wednesday = friday - timedelta(days=2)
+    thursday  = friday - timedelta(days=1)
+    return wednesday, thursday
 
 
 def find_wayback_snapshot(rt_slug: str, release_date: str) -> tuple[str | None, str | None]:
     """
-    Find Wayback snapshot closest to Monday 10am ET after opening weekend.
+    Find Wayback snapshot on Wed or Thu before opening weekend (embargo lift).
+    Target: Thursday evening US time = Thursday 22:00-23:59 UTC.
+    Falls back to Wednesday, then any snapshot in the Wed-Fri window.
     Returns (timestamp, readable_date) or (None, None).
     """
-    monday = get_monday_after_opening(release_date)
-    if not monday:
+    wednesday, thursday = get_embargo_window(release_date)
+    if not thursday:
         return None, None
 
     rt_url = f"rottentomatoes.com/m/{rt_slug}"
 
-    # Search window: Monday 14:00 UTC to Monday 20:00 UTC
-    # (covers 10am EDT through 4pm EDT — solidly "Monday morning US time")
-    from_ts = monday.strftime("%Y%m%d") + "140000"
-    to_ts = monday.strftime("%Y%m%d") + "200000"
+    # Primary: Thursday 20:00-23:59 UTC (4pm-7pm ET — after embargo lifts)
+    from_ts = thursday.strftime("%Y%m%d") + "200000"
+    to_ts   = thursday.strftime("%Y%m%d") + "235959"
 
     # Primary: Monday 14:00-20:00 UTC window
     data = cdx_get({
