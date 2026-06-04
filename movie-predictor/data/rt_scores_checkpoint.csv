@@ -1,13 +1,13 @@
 title,year,release_date,rt_slug,wayback_timestamp,wayback_date_prerelease,rt_score_prerelease,rt_reviews_prerelease,rt_audience_prerelease,rt_score_final,rt_reviews_final,rt_audience_final
 Star Wars: Episode IX - The Rise of Skywalker,2020,2019-12-20,,,,,,,,,
 1917,2020,Dec 25,1917_2019,,,,,,88.0,474.0,88.0
-Jumanji: The Next Level,2020,2019-12-13,jumanji_the_next_level,20191212223232,2019-12-12 22:32 UTC (Thu eve),67.0,110.0,,72.0,248.0,87.0
+Jumanji: The Next Level,2020,2019-12-13,jumanji_the_next_level,20191212223232,2019-12-12 22:32 UTC (Thu eve),67.0,110,,72.0,248.0,87.0
 Little Women,2020,2019-12-25,,,,,,,,,
-Birds of Prey and the Fantabulous Emancipation of One Harley Quinn,2020,2020-02-07,birds_of_prey_2020,20200206222719,2020-02-06 22:27 UTC (Thu eve),87.0,138.0,,79.0,449.0,78.0
-Bad Boys for Life,2020,2020-01-17,bad_boys_for_life,20200116205239,2020-01-16 20:52 UTC (Thu eve),76.0,99.0,,76.0,269.0,96.0
-The Invisible Man,2020,2020-02-28,the_invisible_man_2020,20200227004712,2020-02-27 00:47 UTC (Thu),90.0,71.0,,91.0,422.0,88.0
+Birds of Prey and the Fantabulous Emancipation of One Harley Quinn,2020,2020-02-07,birds_of_prey_2020,20200206222719,2020-02-06 22:27 UTC (Thu eve),87.0,138,,79.0,449.0,78.0
+Bad Boys for Life,2020,2020-01-17,bad_boys_for_life,20200116205239,2020-01-16 20:52 UTC (Thu eve),76.0,99,,76.0,269.0,96.0
+The Invisible Man,2020,2020-02-28,the_invisible_man_2020,20200227004712,2020-02-27 00:47 UTC (Thu),90.0,71,,91.0,422.0,88.0
 Sonic the Hedgehog,2020,2020-02-14,sonic_the_hedgehog,,,,,,78.0,349.0,78.0
-Onward,2020,2020-03-06,onward,20200305193735,2020-03-05 19:37 UTC (Thu),87.0,154.0,,88.0,346.0,95.0
+Onward,2020,2020-03-06,onward,20200305193735,2020-03-05 19:37 UTC (Thu),87.0,154,,88.0,346.0,95.0
 Dolittle,2020,2020-01-17,dolittle,20200116010808,2020-01-16 01:08 UTC (Thu),,,,15.0,240.0,76.0
 Tenet,2020,2020-09-03,tenet,20200903202558,2020-09-03 20:25 UTC (Thu eve),,,,70.0,379.0,76.0
 Knives Out,2020,2019-11-27,knives_out,,,,,,97.0,471.0,92.0
@@ -23,7 +23,7 @@ Fantasy Island,2020,2020-02-14,fantasy_island,,,,,,86.0,2.0,86.0
 Unhinged,2020,Aug 14,unhinged,,,,,,27.0,49.0,27.0
 Wonder Woman 1984,2020,2020-12-25,wonder_woman_1984,,,,,,57.0,455.0,73.0
 The New Mutants,2020,2020-08-28,the_new_mutants,,,,,,36.0,136.0,55.0
-Like a Boss,2020,2020-01-10,like_a_boss,20200109202528,2020-01-09 20:25 UTC (pre-release fallback),25.0,40.0,,22.0,159.0,65.0
+Like a Boss,2020,2020-01-10,like_a_boss,20200109202528,2020-01-09 20:25 UTC (pre-release fallback),25.0,40,,22.0,159.0,65.0
 The Photograph,2020,2020-02-14,the-photograph,,,,,,62.0,10.0,62.0
 The Grudge,2020,2020-01-03,the_grudge,,,,,,41.0,163.0,46.0
 The War with Grandpa,2020,2020-10-09,the_war_with_grandpa,,,,,,29.0,121.0,85.0
@@ -52,8 +52,8 @@ Monster Hunter,2020,2020-12-18,monster_hunter,,,,,,45.0,98.0,70.0
 A Beautiful Day in the Neighborhood,2020,2019-11-22,a_beautiful_day_in_the_neighborhood,,,,,,95.0,380.0,92.0
 Richard Jewell,2020,2019-12-13,richard_jewell,20191212190551,2019-12-12 19:05 UTC (pre-release fallback),,,,77.0,299.0,96.0
 Hocus Pocus,2020,2020-10-02,hocus_pocus,,,,,,42.0,65.0,72.0
-The Broken Hearts Gallery,2020,2020-09-11,the_broken_hearts_gallery,20200910160549,2020-09-10 16:05 UTC (Thu),79.0,28.0,,80.0,117.0,88.0
-Portrait of a Lady on Fire,2020,2019-12-06,portrait_of_a_lady_on_fire,20191205150453,2019-12-05 15:04 UTC (Thu),98.0,107.0,,98.0,337.0,92.0
+The Broken Hearts Gallery,2020,2020-09-11,the_broken_hearts_gallery,20200910160549,2020-09-10 16:05 UTC (Thu),79.0,28,,80.0,117.0,88.0
+Portrait of a Lady on Fire,2020,2019-12-06,portrait_of_a_lady_on_fire,20191205150453,2019-12-05 15:04 UTC (Thu),98.0,107,,98.0,337.0,92.0
 2020 Oscar Nominated Short Films,2020,2020-01-31,,,,,,,,,
 The SpongeBob Movie: Sponge on the Run,2020,2020-08-14,the_spongebob_movie_sponge_on_the_run,,,,,,66.0,74.0,48.0
 News of the World,2020,2020-12-25,news_of_the_world,,,,,,88.0,270.0,89.0
@@ -199,3 +199,53 @@ No Time to Die,2021,2021-10-08,no_time_to_die_2021,20211007220623,2021-10-07 22:
 Eternals,2021,2021-11-05,eternals,,,,,,48.0,416.0,77.0
 Free Guy,2021,2021-08-13,free_guy,20210812043715,2021-08-12 04:37 UTC (Thu),,,,80.0,296.0,94.0
 Dune: Part One,2021,2021-10-22,,,,,,,,,
+Jungle Cruise,2021,2021-07-30,jungle_cruise,20210729231953,2021-07-29 23:19 UTC (Thu eve),,,,62.0,348.0,92.0
+Ghostbusters: Afterlife,2021,2021-11-19,ghostbusters_afterlife,20211117122402,2021-11-17 12:24 UTC (Wed),,,,63.0,308.0,94.0
+Encanto,2021,2021-11-24,encanto_2021,20211125232240,2021-11-25 23:22 UTC (Thu),,,,92.0,209.0,93.0
+Halloween Kills,2021,2021-10-15,halloween_kills,20211014054305,2021-10-14 05:43 UTC (Thu),,,,38.0,276.0,66.0
+A Quiet Place Part II,2021,2021-05-28,a_quiet_place_part_ii,,,,,,91.0,366.0,92.0
+Godzilla vs. Kong,2021,2021-03-31,godzilla_vs_kong,,,,,,75.0,391.0,91.0
+Cruella,2021,2021-05-28,cruella,20210527005429,2021-05-27 00:54 UTC (Thu),,,,75.0,415.0,97.0
+The Boss Baby 2: Family Business,2021,2021-07-02,,,,,,,,,
+Sing 2,2021,2021-12-22,sing_2,20211223225236,2021-12-23 22:52 UTC (Thu eve),,,,72.0,134.0,98.0
+Space Jam: A New Legacy,2021,2021-07-16,space_jam_a_new_legacy,,,,,,25.0,228.0,79.0
+The Suicide Squad,2021,2021-08-06,the_suicide_squad,20210805155420,2021-08-05 15:54 UTC (pre-release fallback),,,,90.0,384.0,82.0
+Candyman,2021,2021-08-27,candyman,,,,,,79.0,82.0,64.0
+The Conjuring: The Devil Made Me Do It,2021,2021-06-04,the_conjuring_the_devil_made_me_do_it,20210601183707,2021-06-01 18:37 UTC (pre-release fallback),67.0,46,,56.0,253.0,83.0
+Raya and the Last Dragon,2021,2021-03-05,raya_and_the_last_dragon,20210304052544,2021-03-04 05:25 UTC (Thu),,,,93.0,303.0,97.0
+The Addams Family 2,2021,2021-10-01,the_addams_family_2,,,,,,28.0,111.0,69.0
+Clifford the Big Red Dog,2021,2021-11-10,clifford_the_big_red_dog,20211109211102,2021-11-09 21:11 UTC (pre-release fallback),,,,58.0,96.0,94.0
+House of Gucci,2021,2021-11-24,house_of_gucci,,,,,,62.0,373.0,83.0
+Old,2021,2021-07-23,old,20210721164952,2021-07-21 16:49 UTC (Wed),,,,50.0,342.0,53.0
+The Forever Purge,2021,2021-07-02,the_forever_purge,20210701162141,2021-07-01 16:21 UTC (pre-release fallback),,,,48.0,160.0,78.0
+Hitman's Wife's Bodyguard,2021,2021-06-16,,,,,,,,,
+Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train,2021,2021-04-23,demon_slayer_kimetsu_no_yaiba_the_movie_mugen_train,,,,,,98.0,49.0,99.0
+PAW Patrol: The Movie,2021,2021-08-20,paw_patrol_the_movie,20210819223716,2021-08-19 22:37 UTC (pre-release fallback),,,,82.0,50.0,97.0
+Mortal Kombat,2021,2021-04-23,mortal_kombat,,,,,,44.0,77.0,58.0
+Tom & Jerry,2021,2021-02-26,tom_and_jerry,,,,,,29.0,130.0,82.0
+Peter Rabbit 2: The Runaway,2021,2021-06-11,peter_rabbit_2_the_runaway,,,,,,68.0,75.0,89.0
+Don't Breathe 2,2021,2021-08-13,dont_breathe_2,,,,,,43.0,81.0,85.0
+The Matrix Resurrections,2021,2021-12-22,the_matrix_resurrections,,,,,,63.0,363.0,63.0
+West Side Story,2021,2021-12-10,west_side_story,,,,,,92.0,115.0,84.0
+In the Heights,2021,2021-06-11,in_the_heights_2021,20210610180929,2021-06-10 18:09 UTC (pre-release fallback),,,,94.0,373.0,94.0
+Snake Eyes,2021,2021-07-23,snake_eyes,,,,,,42.0,71.0,36.0
+Wrath of Man,2021,2021-05-07,wrath_of_man,,,,,,68.0,260.0,90.0
+Nobody,2021,2021-03-26,nobody_2021,,,,,,83.0,287.0,94.0
+The Croods: A New Age,2021,2020-11-25,the_croods_a_new_age,20201125085620,2020-11-25 08:56 UTC (pre-release fallback),,,,77.0,156.0,94.0
+Escape Room: Tournament of Champions,2021,2021-07-16,escape_room_tournament_of_champions,,,,,,52.0,79.0,75.0
+Respect,2021,2021-08-13,respect_2021,20210812024935,2021-08-12 02:49 UTC (pre-release fallback),,,,68.0,192.0,95.0
+Wonder Woman 1984,2021,2020-12-25,wonder_woman_1984,20201223153114,2020-12-23 15:31 UTC (Wed),,,,57.0,455.0,73.0
+Spiral,2021,2021-05-14,spiral_from_the_book_of_saw,20210513092525,2021-05-13 09:25 UTC (Thu),,,,39.0,233.0,75.0
+Ron's Gone Wrong,2021,2021-10-22,rons_gone_wrong,20211019005719,2021-10-19 00:57 UTC (pre-release fallback),85.0,33,,82.0,102.0,94.0
+The Green Knight,2021,2021-07-30,the_green_knight,20210729072815,2021-07-29 07:28 UTC (pre-release fallback),,,,89.0,331.0,50.0
+Spirit Untamed,2021,2021-06-04,spirit_untamed,,,,,,48.0,115.0,95.0
+Resident Evil: Welcome to Raccoon City,2021,2021-11-24,resident_evil_welcome_to_raccoon_city,20211125135629,2021-11-25 13:56 UTC (pre-release fallback),,,,30.0,92.0,65.0
+The King's Man,2021,2021-12-22,the_kings_man,,,,,,41.0,183.0,80.0
+The French Dispatch,2021,2021-10-22,the_french_dispatch,,,,,,75.0,321.0,76.0
+The Little Things,2021,2021-01-29,the_little_things_2021,,,,,,45.0,267.0,67.0
+Stillwater,2021,2021-07-30,,,,,,,,,
+The Marksman,2021,2021-01-15,the_marksman_2021,,,,,,38.0,109.0,83.0
+The Unholy,2021,2021-04-02,the_unholy,,,,,,25.0,8.0,44.0
+Dear Evan Hansen,2021,2021-09-24,dear_evan_hansen,,,,,,28.0,281.0,88.0
+My Hero Academia: World Heroes' Mission,2021,2021-10-29,my_hero_academia_world_heroes_mission,20211028224703,2021-10-28 22:47 UTC (Thu eve),,,,87.0,30.0,95.0
+Christmas with the Chosen: The Messengers,2021,2021-12-01,christmas_with_the_chosen_the_messengers,,,,,,96.0,1313.0,96.0
