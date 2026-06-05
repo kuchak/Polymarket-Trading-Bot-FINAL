@@ -1,7 +1,7 @@
 [
-  "rt_score_monday",
-  "rt_reviews_monday",
-  "rt_audience_monday",
+  "rt_score_prerelease",
+  "rt_reviews_prerelease",
+  "rt_audience_prerelease",
   "log_budget",
   "budget_known",
   "mpaa_ordinal",
