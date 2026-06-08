@@ -142,6 +142,10 @@ def _parse_tn_daily_table(soup: BeautifulSoup) -> list[dict]:
         header_cells = rows[0].find_all(["th", "td"])
         header_cols = [h.get_text(strip=True).lower() for h in header_cells]
 
+        # Skip weekly-summary tables (they have a "week" column — we want the daily table)
+        if any(h in ("week", "wk", "#") for h in header_cols):
+            continue
+
         # Need a date column and a gross column
         date_idx = next((i for i, h in enumerate(header_cols)
                          if h in ("date", "day", "release date")), None)
